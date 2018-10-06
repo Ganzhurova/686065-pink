@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -43,44 +45,46 @@
     </header>
 
     <main class="page-main">
+      <div class="page-main__top main-top">
 
-      <h1 class="visually-hidden">
-        Приложение для фотографий Pink
-      </h1>
+        <h1 class="visually-hidden">
+          Приложение для фотографий Pink
+        </h1>
 
-      <div class="columns-wrapper">
-        <div class="example">
-          <img class="example__img" src="http://placehold.it/150x100" alt="Пример использования приложения Pink">
+        <div class="columns-wrapper">
+          <div class="example">
+            <img class="example__img" src="http://placehold.it/150x100" alt="Пример использования приложения Pink">
+          </div>
+
+          <section class="download">
+            <h2 class="visually-hidden">
+              Где скачать приложение
+            </h2>
+            <a class="download__button button" href="https://www.apple.com/ru/itunes/">
+              Скачать приложение
+            </a>
+            <ul class="download__list">
+              <li class="download__item">
+                <a class="download__link download__link--apple" href="#">
+                  Apple
+                </a>
+              </li>
+              <li class="download__item">
+                <a class="download__link download__link--android" href="#">
+                  Android
+                </a>
+              </li>
+              <li class="download__item">
+                <a class="download__link download__link--Windows" href="#">
+                  Windows
+                </a>
+              </li>
+            </ul>
+            <p class="download__desc">
+              Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+            </p>
+          </section>
         </div>
-
-        <section class="download">
-          <h2 class="visually-hidden">
-            Где скачать приложение
-          </h2>
-          <a class="download__button button" href="https://www.apple.com/ru/itunes/">
-            Скачать приложение
-          </a>
-          <ul class="download__list">
-            <li class="download__item">
-              <a class="download__link download__link--apple" href="#">
-                Apple
-              </a>
-            </li>
-            <li class="download__item">
-              <a class="download__link download__link--android" href="#">
-                Android
-              </a>
-            </li>
-            <li class="download__item">
-              <a class="download__link download__link--Windows" href="#">
-                Windows
-              </a>
-            </li>
-          </ul>
-          <p class="download__desc">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-          </p>
-        </section>
       </div>
 
       <section class="features">
