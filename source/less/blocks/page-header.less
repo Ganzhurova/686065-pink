@@ -1,0 +1,51 @@
+.page-header {
+  background-color: @darkblue;
+
+  outline: 2px solid yellow;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  outline: 2px solid green;
+  min-height: 69px;         //временно, добавить паддинги сверху снизу
+}
+
+.page-header__logo {
+  width: 75px;
+  height: 25px;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: 620px;
+    min-height: 110px;     //временно
+  }
+
+  .page-header__logo {
+    width: 150px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    display: flex;
+    padding: 0 130px;
+    justify-content: space-between;
+
+    background-color: transparent;
+  }
+
+  .page-header__wrapper {
+    padding: 0;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
