@@ -1,13 +1,17 @@
 .page-header {
+  position: relative;
+
+  margin-bottom: -66px;
+
   background-color: @darkblue;
 
-  outline: 2px solid yellow;
+  outline: 2px solid yellow;  //временно
 }
 
-.page-header__wrapper {
+.page-header__top {
   display: flex;
   justify-content: space-between;
-  width: 260px;
+  width: 280px;
   margin: 0 auto;
   padding: 0 20px;
 
@@ -22,7 +26,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__wrapper {
+  .page-header {
+    margin-bottom: -110px;
+  }
+
+  .page-header__top {
     width: 620px;
     min-height: 110px;     //временно
   }
@@ -34,14 +42,19 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    display: flex;
-    padding: 0 130px;
-    justify-content: space-between;
-
-    background-color: transparent;
+    background-color: fade(@black, 30%);
   }
 
   .page-header__wrapper {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .page-header__top {
+    margin: auto;
     padding: 0;
   }
 

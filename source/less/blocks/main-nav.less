@@ -1,5 +1,6 @@
 .main-nav {
-  padding: 0 20px;
+  width: 320px;
+  margin: 0 auto;
 
   font-size: 18px;
   line-height: 32px;
@@ -18,10 +19,16 @@
   .reset-list;
 }
 
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 660px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .main-nav {
     width: 630px;
-    padding: 0;
+    margin: auto;
 
     background-color: transparent;
 
