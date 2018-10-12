@@ -24,7 +24,7 @@
   text-align: center;
 }
 
-.features__column-wrapper {
+.features__wrapper {
   background-color: @lightgray;
 }
 
@@ -75,6 +75,10 @@
   display: none;
 }
 
+.features__bonus {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .features {
     width: 660px;
@@ -88,6 +92,7 @@
 
   .features__column-wrapper {
     display: flex;
+    padding: 0 20px;
   }
 
   .features__text-list {
@@ -112,8 +117,48 @@
     width: 268px;
     height: 481px;
     margin-right: 45px;
-    margin-left: 20px;
     margin-top: 7px;
+  }
+
+  .features__bonus {
+    display: block;
+    padding: 0 20px;
+    padding-top: 58px;
+    padding-bottom: 52px;
+
+    background-color: @white;
+
+    outline: 2px solid green; //временно
+  }
+
+  .features__bonus-wrapper {
+    min-height: 276px;    //временно
+
+    position: relative;
+    padding-left: 310px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 238px;
+      height: 276px;
+
+      background-image: url("../../img/icon-timer.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+
+      background-color: #ff0000;
+    }
+  }
+
+  .features__more {
+    line-height: 24px;
+    text-decoration: underline;
+    color: @pink;
   }
 }
 
@@ -132,13 +177,14 @@
 
   .features__column-wrapper {
     flex-direction: column;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .features__text-list {
     flex-direction: row;
-    width: 960px;
     min-height: 230px;  //временно
-    margin: 0 auto;
 
     outline: 2px solid red;
   }
@@ -154,10 +200,8 @@
   .features__photo-list {
     display: flex;
     justify-content: space-around;
-    width: 960px;
-    margin: 0 auto;
 
-    outline: 2px solid red;
+    outline: 2px solid red;   //временно
   }
 
   .features__photo-item {
@@ -168,5 +212,32 @@
 
   .features__photo-item--visibility {
     display: block;
+  }
+
+  .features__bonus {
+    padding: 0;
+
+    background-color: transparent;
+  }
+
+  .features__bonus-wrapper {
+    width: 570px;
+    height: 429px;   //временно
+    margin: 0 auto;
+    padding-left: 380px;
+    padding-right: 10px;
+
+    outline: 2px solid red;  //временно
+    &::before {
+      top: 17px;
+      left: 10px;
+
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  .features__bonus--title {
+    padding-top: 115px;
   }
 }
