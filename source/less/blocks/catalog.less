@@ -41,13 +41,14 @@
 }
 
 .catalog__text-wrapper {
-  margin: 0 20px;
   padding-top: 15px;
   padding-bottom: 19px;
   padding-left: 17px;
   padding-right: 20px;
 
   background-color: @lightgray;
+
+  outline: 2px solid green;   //временно
 }
 
 .catalog__item {
@@ -55,10 +56,8 @@
   margin-bottom: 20px;
 
   background-color: @lightgray;
-}
 
-.catalog__item:last-child {
-  margin-bottom: 0;
+  outline: 2px solid blue;   //временно
 }
 
 .catalog__picture {
@@ -67,10 +66,6 @@
   height: 180px;
 
   outline: 2px solid green;   //временно
-}
-
-.catalog__comment {
-  margin: 0;
 }
 
 .catalog__autor {
@@ -88,6 +83,10 @@
   line-height: 24px;
   font-weight: lighter;
   text-transform: uppercase;
+}
+
+.catalog__comment {
+  margin: 0;
 }
 
 .catalog__text {
@@ -121,6 +120,66 @@
   .catalog__intro br {
     display: none;
   }
+
+  .catalog__top-photo {
+    margin-bottom: 50px;
+  }
+
+  .catalog__photo-wrapper {
+    width: 660px;
+    height: 509px;
+  }
+
+  .catalog__text-wrapper {
+    margin: 0;
+    padding: 0 27px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .catalog__text-wrapper--alteration {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    padding: 25px 27px;
+  }
+
+  .catalog__autor--alteration {
+    margin-right: auto;
+  }
+
+  .catalog__comment--alteration {
+    order: 1;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .catalog__item {
+    width: 300px;
+    min-height: 455px;   //временно?
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .catalog__picture {
+    width: 300px;
+    height: 300px;
+  }
+
+  .catalog__like {
+    display: flex;
+  }
+
+  .catalog__like-text {
+    order: -1;
+    margin-right: auto;
+    padding-right: 17px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -140,5 +199,34 @@
 
   .catalog__intro br {
     display: block;
+  }
+
+  .catalog__photo-wrapper {
+    width: auto;
+    height: 506px;
+  }
+
+  .catalog__text-wrapper--alteration {
+    width: 886px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    outline: 2px solid aqua;     //временно
+  }
+
+  .catalog__list {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .catalog__item {
+    min-height: 555px;
+    margin-bottom: 54px;
+  }
+
+  .catalog__picture {
+    width: 300px;
+    height: 400px;
   }
 }
