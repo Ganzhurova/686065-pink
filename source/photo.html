@@ -273,45 +273,54 @@
             </header>
 
             <form class="filter__photo" method="get" action="https://echo.htmlacademy.ru">
-              <img class="filter__user-photo" src="http://placehold.it/150x100" alt="Фотография пользователя">
-              <div class="filter__options">
-                <input class="filter__option" type="radio" name="settings" id="filter-crop" value="crop" checked>
-                <input class="filter__option" type="radio" name="settings" id="filter-color" value="color">
-                <input class="filter__option" type="radio" name="settings" id="filter-brightness" value="brightness">
-                <div class="filter__icons">
-                  <label class="filter__icon filter__icon--crop" for="filter-crop">
-                  </label>
-                  <label class="filter__icon filter__icon--color" for="filter-color">
-                  </label>
-                  <label class="filter__icon filter__icon--brightness" for="filter-brightness">
-                  </label>
+
+              <div class="filter__photo-wrapper">
+                <img class="filter__user-photo" src="http://placehold.it/150x100" alt="Фотография пользователя">
+              </div>
+
+              <div class="filter__control-wrapper">
+                <div class="filter__options">
+                  <input class="filter__option" type="radio" name="settings" id="filter-crop" value="crop" checked>
+                  <input class="filter__option" type="radio" name="settings" id="filter-color" value="color">
+                  <input class="filter__option" type="radio" name="settings" id="filter-brightness" value="brightness">
+                  <div class="filter__icons">
+                    <label class="filter__icon filter__icon--crop" for="filter-crop">
+                    </label>
+                    <label class="filter__icon filter__icon--color" for="filter-color">
+                    </label>
+                    <label class="filter__icon filter__icon--brightness" for="filter-brightness">
+                    </label>
+                  </div>
+                  <div class="filter__range-controls">
+                    <div class="range">
+                      <div class="range__scale">
+                      </div>
+                      <div class="range__slider">
+                      </div>
+                    </div>
+                    <div class="range">
+                      <div class="range__scale">
+                      </div>
+                      <div class="range__slider">
+                      </div>
+                    </div>
+                    <div class="range">
+                      <div class="range__scale">
+                      </div>
+                      <div class="range__slider">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="filter__range-controls">
-                  <div class="range">
-                    <div class="range__scale">
-                    </div>
-                    <div class="range__slider">
-                    </div>
-                  </div>
-                  <div class="range">
-                    <div class="range__scale">
-                    </div>
-                    <div class="range__slider">
-                    </div>
-                  </div>
-                  <div class="range">
-                    <div class="range__scale">
-                    </div>
-                    <div class="range__slider">
-                    </div>
-                  </div>
+
+                <div class="filter__buttons">
+                  <button class="filter__post button button--filter-post" type="submit">
+                    Запостить
+                  </button>
+                  <button class="filter__cancel button button--filter-cancel" type="reset">
+                    Отмена
+                  </button>
                 </div>
-                <button class="filter__post button button--filter-post" type="submit">
-                  Запостить
-                </button>
-                <button class="filter__cancel button button--filter-cancel" type="reset">
-                  Отмена
-                </button>
               </div>
             </form>
           </div>

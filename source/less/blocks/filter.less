@@ -1,15 +1,157 @@
 .filter {
+  width: 320px;
+  margin: 0 auto;
+
   color: @darkblue;
 
-  background-color: @lightgray;
+  background-color: @white;
 
-  outline: 2px solid red;
+  outline: 2px solid red;   //временно
 }
 
 .filter__header {
-  padding: 45px 20px;
+  padding: 0 20px;
+  padding-top: 42px;
+  padding-bottom: 42px;
 
   text-align: center;
 
   background-color: @white;
+
+  outline: 2px solid aqua;    //временно
+}
+
+.filter__intro {
+  margin: 0;
+}
+
+.filter__photo {
+  padding-top: 20px;
+
+  background-color: @lightgray;
+}
+
+.filter__photo-wrapper {
+  width: 280px;
+  height: 374px;
+  margin: 0 20px;
+
+  outline: 2px solid green;    //временно
+}
+
+.filter__options {
+  min-height: 161px;     //временно
+  border-bottom: 1px solid fade(@darkblue, 10%);
+
+  outline: 2px solid aqua;   //временно
+}
+
+.filter__buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 38px 20px;
+
+  outline: 2px solid aqua;    //временно
+}
+
+.filter__post {
+  width: 280px;
+  height: 55px;
+
+  margin-bottom: 12px;
+}
+
+.filter__cancel {
+  width: 280px;
+  height: 55px;
+}
+
+@media (min-width: @tablet-width) {
+  .filter {
+    width: 660px;
+  }
+
+  .filter__header {
+    padding-top: 44px;
+    padding-bottom: 67px;
+
+    font-size: 18px;
+  }
+
+  .filter__photo {
+    display: flex;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  .filter__photo-wrapper {
+    width: 300px;
+    height: 400px;
+    margin-right: 47px;
+  }
+
+  .filter__control-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .filter__options {
+    min-height: 198px;    //временно
+  }
+
+  .filter__buttons {
+    padding: 0;
+  }
+
+  .filter__post {
+    width: 260px;
+    margin-bottom: 24px;
+  }
+
+  .filter__cancel {
+    width: 260px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter {
+    width: auto;
+    margin: 0;
+  }
+
+  .filter__wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .filter__header {
+    padding-top: 5px;
+  }
+
+  .filter__photo {
+    margin: 0 10px;
+    padding: 57px 60px;
+  }
+
+  .filter__photo-wrapper {
+    margin-right: 90px;
+  }
+
+  .filter__buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 410px;
+    padding: 0;
+  }
+
+  .filter__post {
+    width: 183px;
+    margin-bottom: 0;
+  }
+
+  .filter__cancel {
+    width: 183px;
+  }
 }
