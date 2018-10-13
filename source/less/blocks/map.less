@@ -10,3 +10,20 @@
 
   outline: 2px solid red;
 }
+
+@media (min-width: @tablet-width) {
+  .map {
+    width: 660px;
+    height: 375px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    width: auto;
+    height: 505px;
+    margin: 0;
+
+    background-size: cover;
+  }
+}

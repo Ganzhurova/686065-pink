@@ -12,12 +12,11 @@
 
 .features__header {
   min-height: 140px; //временно
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 .features__intro {
   margin: 0;
-  padding: 0 20px;
 
   font-size: 24px;
   font-weight: lighter;
@@ -86,8 +85,8 @@
   }
 
   .features__header {
-    min-height: 240px;  //временно
-    padding: 0;
+    min-height: 98px;  //временно
+    padding: 70px 20px;
   }
 
   .features__column-wrapper {
@@ -132,9 +131,10 @@
   }
 
   .features__bonus-wrapper {
-    min-height: 276px;    //временно
-
     position: relative;
+
+    min-height: 236px;    //временно
+    padding-top: 40px;
     padding-left: 310px;
 
     &::before {
@@ -167,18 +167,20 @@
     width: auto;
   }
 
-  .features__header {
+  .features__wrapper {
     width: 960px;
-    min-height: 317px; //временно
     margin: 0 auto;
+  }
+
+  .features__header {
+    min-height: 177px; //временно
+    padding: 70px 0;
 
     outline: 2px solid red;
   }
 
   .features__column-wrapper {
     flex-direction: column;
-    width: 960px;
-    margin: 0 auto;
     padding: 0;
   }
 
@@ -221,9 +223,9 @@
   }
 
   .features__bonus-wrapper {
-    width: 570px;
-    height: 429px;   //временно
-    margin: 0 auto;
+    min-height: 204px;   //временно
+    padding-top: 115px;
+    padding-bottom: 110px;
     padding-left: 380px;
     padding-right: 10px;
 
@@ -235,9 +237,5 @@
       width: 298px;
       height: 345px;
     }
-  }
-
-  .features__bonus--title {
-    padding-top: 115px;
   }
 }
