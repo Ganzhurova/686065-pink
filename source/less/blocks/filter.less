@@ -54,16 +54,13 @@
   outline: 2px solid aqua;    //временно
 }
 
-.filter__post {
+.filter__button {
   width: 280px;
   height: 55px;
-
-  margin-bottom: 12px;
 }
 
-.filter__cancel {
-  width: 280px;
-  height: 55px;
+.filter__button:first-child {
+  margin-bottom: 12px;
 }
 
 @media (min-width: @tablet-width) {
@@ -104,13 +101,12 @@
     padding: 0;
   }
 
-  .filter__post {
+  .filter__button {
     width: 260px;
-    margin-bottom: 24px;
   }
 
-  .filter__cancel {
-    width: 260px;
+  .filter__button:first-child {
+    margin-bottom: 24px;
   }
 }
 
@@ -146,12 +142,11 @@
     padding: 0;
   }
 
-  .filter__post {
+  .filter__button {
     width: 183px;
-    margin-bottom: 0;
   }
 
-  .filter__cancel {
-    width: 183px;
+  .filter__button:first-child {
+    margin-bottom: 0;
   }
 }
