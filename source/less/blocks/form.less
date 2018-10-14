@@ -1,4 +1,7 @@
 .form {
+  width: 320px;
+  margin: 0 auto;
+
   color: @darkblue;
 
   background-color: @white;
@@ -7,7 +10,10 @@
 }
 
 .form__header {
-  padding: 50px 20px;
+  padding: 0 20px;
+  padding-top: 50px;
+
+  outline: 2px solid red;   //временно
 }
 
 .form__desc {
@@ -16,12 +22,14 @@
   text-align: center;
 }
 
-.form__group-wrapper {
-  padding: 40px 20px;
+.form__desc--visibility {
+  display: none;
 }
 
-.form__group-wrapper--lightgray {
-  background-color: @lightgray;
+.form__group-wrapper {
+  padding: 0 20px;
+  padding-top: 35px;
+  padding-bottom: 43px;
 }
 
 .form__group {
@@ -31,28 +39,139 @@
   border: none;
 }
 
+.form__paragraph {
+  margin: 0;
+  margin-bottom: 21px;
+
+  outline: 2px solid aqua;   //временно
+}
+
+.form__paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .form__list {
   .reset-list;
 }
 
+.form__item {
+  margin-bottom: 52px;
+  padding-left: 68px;
+
+  outline: 2px solid green;    //временно
+}
+
+.form__item:last-child {
+  margin-bottom: 0;
+}
+
+.form__item--radio {
+  margin-bottom: 44px;
+}
+
 .form__title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 45px;
+  padding: 0 30px;
 
   line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @pink;
+}
+
+.form__title--emotions {
+  margin-bottom: 20px;
+}
+
+.form__title-field {
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 22px;
+
   text-transform: uppercase;
   color: @pink;
 }
 
-.form__title-field {
-  text-transform: uppercase;
-  color: @pink;
+.form__field {
+  box-sizing: border-box;
+  width: 280px;
+  padding: 0 22px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+
+  font-size: 18px;
+  color: @darkblue;
+
+  background-color: transparent;
+  border: none;
+
+  box-shadow: 0 0 0 2px #e5e5e5;
 }
 
 .form__text {
   font-size: 18px;
 }
 
+.form__textarea {
+  width: 240px;
+  height: 167px;
+  padding: 15px 20px;
+
+  font-size: 18px;
+
+  border: none;
+
+  box-shadow: 0 0 0 2px #e5e5e5;
+}
+
+.form__group-bottom {
+  padding: 0 20px;
+  padding-bottom: 15px;
+}
+
+.form__button {
+  display: block;
+  width: 280px;
+  height: 62px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
 .form__note {
   margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form__note sup {
+  color: @pink;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form__group-wrapper:nth-child(odd) {
+    background-color: @lightgray;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 660px;
+  }
+
+  .form__header {
+    padding-top: 95px;
+  }
+
+  .form__desc {
+    width: 500px;
+    margin: 0 auto;
+
+    font-size: 18px;
+  }
+
+  .form__desc--visibility {
+    display: block;
+  }
 }
