@@ -30,6 +30,8 @@
   padding: 0 20px;
   padding-top: 35px;
   padding-bottom: 43px;
+
+  outline: 2px solid brown;    //временно
 }
 
 .form__group {
@@ -78,6 +80,10 @@
   text-transform: uppercase;
   text-align: center;
   color: @pink;
+}
+
+.form__title--visibility {
+  display: none;
 }
 
 .form__title--emotions {
@@ -173,5 +179,124 @@
 
   .form__desc--visibility {
     display: block;
+  }
+
+  .form__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__group-wrapper {
+    margin-bottom: 49px;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  .form__group-wrapper--apps {
+    order: 1;
+  }
+
+  .form__group-wrapper--contacts {
+    order: 2;
+  }
+
+  .form__group-wrapper--progress,
+  .form__group-wrapper--emotions,
+  .form__group-bottom {
+    order: 3;
+  }
+
+  .form__group-wrapper--fullname {
+    padding-top: 76px;
+  }
+
+  .form__group {
+    padding-bottom: 56px;
+
+    border: 2px solid #e5e5e5;
+  }
+
+  .form__title {
+    margin-bottom: 50px;
+  }
+
+  .form__title--visibility {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .form__item {
+    padding-left: 119px;
+  }
+
+  .form__item--checkbox {
+    margin-bottom: 49px;
+  }
+
+  .form__paragraph {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 58px;
+  }
+
+  .form__title-field {
+    margin-right: 22px;
+    padding-left: 0;
+  }
+
+  .form__field {
+    width: 100%;
+  }
+
+  .form__group-wrapper--contacts .form__group {
+    padding-bottom: 0;
+  }
+
+  .form__group-wrapper--contacts .form__paragraph {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .form__group-wrapper--contacts .form__title-field {
+    padding-left: 77px;
+  }
+
+  .form__group-wrapper--contacts .form__field {
+    order: -1;
+    width: 496px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .form__group-wrapper--emotions {
+    margin-bottom: 0;
+  }
+
+  .form__title--emotions {
+    margin-bottom: 35px;
+  }
+
+  .form__textarea {
+    display: block;
+    width: 462px;
+    height: 160px;
+    margin: 0 auto;
+
+    outline: 2px solid red; //временно
+  }
+
+  .form__group-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 67px;
+    padding-bottom: 53px;
+
+    outline: 2px solid aqua; //временно
+  }
+
+  .form__button {
+    width: 300px;
+    margin: 0;
   }
 }
