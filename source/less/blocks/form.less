@@ -44,7 +44,6 @@
 
 .form__group--progress {
   padding-top: 115px;
-  padding-bottom: 0;
 
   .form__list {
     margin-bottom: 51px;
@@ -185,6 +184,12 @@
 @media (max-width: @mobile-width-only) {
   .form__group:nth-child(even) {
     background-color: @lightgray;
+  }
+
+  .form__group--progress {
+    .form__list:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -387,6 +392,7 @@
   .form__group-bottom {
     flex-grow: 1;
     padding: 0;
+    padding-top: 5px;
   }
 
   .form__group--contacts {
