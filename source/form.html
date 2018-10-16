@@ -72,7 +72,7 @@
 
           <div class="form__wrapper">
 
-            <div class="form__group-wrapper form__group-wrapper--fullname">
+            <div class="form__group form__group--fullname">
 
               <p class="form__paragraph">
                 <label class="form__title-field" for="form-surname">
@@ -96,11 +96,12 @@
               </p>
             </div>
 
-            <div class="form__group-wrapper form__group-wrapper--progress">
-              <fieldset class="form__group">
-                <legend class="form__title">
-                  Ваши безбашенные достижения в путешествии
-                </legend>
+            <fieldset class="form__group form__group--progress">
+              <legend class="form__title">
+                Ваши безбашенные достижения в путешествии
+              </legend>
+
+              <div class="form__group-wrapper">
                 <ul class="form__list">
                   <li class="form__item form__item--checkbox">
                     <input class="visually-hidden form__input form__input--checkbox" type="checkbox" name="selfie" id="form-selfie" checked>
@@ -115,7 +116,9 @@
                       Обгорел на пляже
                     </label>
                   </li>
+                </ul>
 
+                <ul class="form__list">
                   <li class="form__item form__item--checkbox">
                     <input class="visually-hidden form__input form__input--checkbox" type="checkbox" name="norris" id="form-norris">
                     <label class="form__text" for="form-norris">
@@ -129,7 +132,9 @@
                       Накупил сувениров
                     </label>
                   </li>
+                </ul>
 
+                <ul class="form__list">
                   <li class="form__item form__item--checkbox">
                     <input class="visually-hidden form__input form__input--checkbox" type="checkbox" name="tower" id="form-tower" checked>
                     <label class="form__text" for="form-tower">
@@ -144,77 +149,77 @@
                     </label>
                   </li>
                 </ul>
-              </fieldset>
-            </div>
+              </div>
+            </fieldset>
 
-            <div class="form__group-wrapper form__group-wrapper--contacts">
-              <fieldset class="form__group">
-                <legend class="form__title form__title--visibility">
-                  Контактная информация
-                </legend>
+            <fieldset class="form__group form__group--contacts">
+              <legend class="form__title form__title--visibility">
+                Контактная информация
+              </legend>
 
-                  <p class="form__paragraph">
-                    <label class="form__title-field" for="form-tel">
-                      Номер телефона
-                    </label>
-                    <input class="form__field" type="text" name="tel" id="form-tel" placeholder="Номер, пожалуйста">
-                  </p>
+              <div class="form__group-wrapper">
+                <p class="form__paragraph">
+                  <label class="form__title-field" for="form-tel">
+                    Номер телефона
+                  </label>
+                  <input class="form__field" type="text" name="tel" id="form-tel" placeholder="Номер, пожалуйста">
+                </p>
 
-                  <p class="form__paragraph">
-                    <label class="form__title-field" for="form-email">
-                      Адрес почты
-                    </label>
-                    <input class="form__field" type="text" name="email" id="form-email" placeholder="Введите почту *" required>
-                  </p>
-              </fieldset>
-            </div>
+                <p class="form__paragraph">
+                  <label class="form__title-field" for="form-email">
+                    Адрес почты
+                  </label>
+                  <input class="form__field" type="text" name="email" id="form-email" placeholder="Введите почту *" required>
+                </p>
+              </div>
+            </fieldset>
 
-            <div class="form__group-wrapper form__group-wrapper--apps">
-              <fieldset class="form__group">
-                <legend class="form__title">
-                  С каким приложением путешествовали?
-                </legend>
-                <ul class="form__list">
-                  <li class="form__item form__item--radio">
-                    <input class="visually-hidden form__input form__input--radio" type="radio" name="application" id="form-ios" value="ios" checked>
-                    <label class="form__text" for="form-ios">
-                      Pink для iOS
-                    </label>
-                  </li>
+            <fieldset class="form__group form__group--apps">
+              <legend class="form__title">
+                С каким приложением путешествовали?
+              </legend>
+              <ul class="form__list">
+                <li class="form__item form__item--radio">
+                  <input class="visually-hidden form__input form__input--radio" type="radio" name="application" id="form-ios" value="ios" checked>
+                  <label class="form__text" for="form-ios">
+                    Pink для iOS
+                  </label>
+                </li>
 
-                  <li class="form__item form__item--radio">
-                    <input class="visually-hidden form__input form__input--radio" type="radio" name="application" id="form-android" value="android">
-                    <label class="form__text" for="form-android">
-                      Pink на Android
-                    </label>
-                  </li>
+                <li class="form__item form__item--radio">
+                  <input class="visually-hidden form__input form__input--radio" type="radio" name="application" id="form-android" value="android">
+                  <label class="form__text" for="form-android">
+                    Pink на Android
+                  </label>
+                </li>
 
-                  <li class="form__item form__item--radio">
-                    <input class="visually-hidden form__input form__input--radio" type="radio" name="application" id="form-windows" value="windows">
-                    <label class="form__text" for="form-windows">
-                      Windows Phone
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
+                <li class="form__item form__item--radio">
+                  <input class="visually-hidden form__input form__input--radio" type="radio" name="application" id="form-windows" value="windows">
+                  <label class="form__text" for="form-windows">
+                    Windows Phone
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
 
-            <div class="form__group-wrapper form__group-wrapper--emotions">
-              <fieldset class="form__group">
-                <legend class="form__title form__title--emotions">
-                  Опишите свои эмоции
-                </legend>
-                <textarea class="form__textarea" name="text" id="form-text" rows="5">Можно прям в красках, не стесняясь в выражениях
-                </textarea>
-              </fieldset>
-            </div>
+            <fieldset class="form__group form__group--emotions">
+              <legend class="form__title">
+                Опишите свои эмоции
+              </legend>
+              <textarea class="form__textarea" name="text" id="form-text" rows="5">Можно прям в красках, не стесняясь в выражениях
+              </textarea>
+            </fieldset>
 
             <div class="form__group-bottom">
               <button class="form__button button button--form" type="submit">
                 Отправить форму
               </button>
               <p class="form__note">
-                <sup>*</sup>— обязательные поля
+                <sup>*</sup>— обязательные
+                <span class="form__note--visibility">
+                  для заполнения
+                </span>
+                поля
               </p>
             </div>
 
