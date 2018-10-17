@@ -1,7 +1,6 @@
 .features {
   width: 320px;
   margin: 0 auto;
-  margin-bottom: -30px;
 
   color: @darkblue;
 
@@ -28,34 +27,36 @@
 }
 
 .features__list {
+  position: relative;
+
   .reset-list;
 
   padding-top: 80px;
+  padding-bottom: 280px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 160px;
+    height: 277px;
+    margin: auto;
+
+    background-image: url("../../img/iphone-screen-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .features__item {
-  display: flex;
-  flex-direction: column;
-
-  outline: 2px solid aqua; //временно
-}
-
-.features__photo-item {
-  order: 1;
-  width: 157px;
-  height: 320px;
-  margin: 0 auto;
-
-  outline: 2px solid aqua; //временно
-}
-
-.features__text {
   padding: 0 20px;
   padding-bottom: 30px;
-}
 
-.features__photo-item--visibility {
-  display: none;
+  outline: 2px solid aqua; //временно
 }
 
 .features__title {
@@ -83,7 +84,6 @@
 @media (min-width: @tablet-width) {
   .features {
     width: 660px;
-    margin-bottom: 0;
   }
 
   .features__header {
@@ -91,20 +91,28 @@
     padding: 70px 20px;
   }
 
-  .features__item {
-    flex-direction: row;
-  }
-
-  .features__photo-item {
-    order: 0;
-    width: 268px;
-    height: 481px;
-    margin-right: 45px;
-    margin-top: 7px;
-  }
-
-  .features__text {
+  .features__list {
+    padding-bottom: 0;
     padding-left: 330px;
+    padding-right: 20px;
+
+    &::before {
+      top: 10px;
+      bottom: auto;
+      left: 20px;
+      right: auto;
+
+      width: 268px;
+      height: 482px;
+
+      background-image: url("../../img/iphone-screen-3-tablet@1x.png");
+    }
+  }
+
+  .features__item {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 35px;
   }
 
   .features__title {
@@ -173,26 +181,97 @@
     min-height: 177px; //временно
     padding: 70px 0;
 
-    outline: 2px solid red;
+    outline: 2px solid red;   //временно
   }
 
-  .features__column-wrapper {
-    flex-direction: column;
-    padding: 0;
+  .features__list {
+    position: static;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    &::before {
+      display: none;
+    }
+
+    outline: 2px solid red; //временно
   }
 
-  .features__text-list {
-    flex-direction: row;
-    min-height: 230px;  //временно
+  .features__item {
+    position: relative;
 
-    outline: 2px solid red;
+    width: 240px;
+    padding-top: 360px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 30px;
+
+    &:first-child {
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 5px;
+        left: 0;
+
+        width: 292px;
+        height: 305px;
+
+        background-image: url("../../img/iphone-screen-1-desktop@1x.png");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        outline: 2px solid red; //временно
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 5px;
+        left: 0;
+
+        width: 292px;
+        height: 305px;
+
+        background-image: url("../../img/iphone-screen-2-desktop@1x.png");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 5px;
+        left: 0;
+
+        width: 292px;
+        height: 305px;
+
+        background-image: url("../../img/iphone-screen-3-desktop@1x.png");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
   }
 
   .features__title {
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    line-height: 30px;
     text-align: center;
   }
 
   .features__desc {
+    font-size: 18px;
+    line-height: 30px;
     text-align: center;
   }
 
@@ -207,10 +286,6 @@
     width: 292px;
     height: 302px;
     margin: 0;
-  }
-
-  .features__photo-item--visibility {
-    display: block;
   }
 
   .features__bonus {
