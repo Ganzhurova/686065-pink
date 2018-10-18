@@ -4,19 +4,23 @@
   margin-bottom: -66px;
 
   background-color: @darkblue;
+}
 
-  outline: 2px solid yellow;  //временно
+.page-header__wrapper {
+  position: relative;
+
+  width: 320px;
+  margin: 0 auto;
 }
 
 .page-header__top {
   display: flex;
   justify-content: space-between;
-  width: 280px;
-  margin: 0 auto;
+  align-items: center;
+  height: 68px;
   padding: 0 20px;
 
-  outline: 2px solid green;
-  min-height: 69px;         //временно, добавить паддинги сверху снизу
+  border-bottom: 1px solid @black;
 }
 
 .page-header__logo {
@@ -26,18 +30,97 @@
   margin: 0;
 }
 
+.page-header__logo-image {
+  width: 75px;
+  height: 23px;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     margin-bottom: -110px;
   }
 
+  .page-header__wrapper {
+    width: 660px;
+  }
+
   .page-header__top {
-    width: 620px;
-    min-height: 110px;     //временно
+    height: 109px;
   }
 
   .page-header__logo {
     width: 150px;
+    height: 40px;
+  }
+
+  .page-header__logo-image {
+    width: 147px;
+    height: 40px;
+  }
+}
+
+@media (max-width: @mobile-and-tablet-width) {
+  .page-header--nav-closed {
+    background-color: fade(@black, 30%);
+
+    .page-header__top {
+      border: none;
+    }
+
+    .page-header__toggle {
+      width: 50px;
+      height: 25px;
+
+      background-image: url("../img/icon-menu-burger.svg");
+      background-color: inherit;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+
+      cursor: pointer;
+      border: none;
+    }
+
+    .page-header__main-nav {
+      display: none;
+    }
+  }
+
+  .page-header--nav-opened {
+    .page-header__toggle {
+      width: 24px;
+      height: 24px;
+
+      background-image: url("../img/icon-menu-cross.svg");
+      background-color: inherit;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+
+      cursor: pointer;
+      border: none;
+    }
+
+    .page-header__main-nav {
+      position: absolute;
+      z-index: 10;
+    }
+  }
+
+  .page-header--nojs {
+    background-color: @darkblue;
+
+    .page-header__top {
+      border-bottom: 1px solid @black;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
+
+    .page-header__main-nav {
+      position: static;
+
+      display: block;
+    }
   }
 }
 
@@ -48,15 +131,17 @@
 
   .page-header__wrapper {
     display: flex;
-    padding: 0 10px;
     justify-content: space-between;
     width: 940px;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   .page-header__top {
-    margin: auto;
+    height: auto;
     padding: 0;
+
+    border: none;
   }
 
   .page-header__toggle {

@@ -12,18 +12,20 @@
 
     <div class="container">
 
-      <header class="page-header">
+      <header class="page-header page-header--nav-closed page-header--nojs">
         <div class="page-header__wrapper">
           <div class="page-header__top">
-            <a class="page-header__logo logo" href="index.html">
-              <img class="logo logo--text" src="http://placehold.it/150x100" alt="Логотип Pink">
+            <a class="page-header__logo" href="index.html">
+              <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
             </a>
             <button class="page-header__toggle" type="button">
-              Открыть меню
+              <span class="visually-hidden">
+                Открыть меню
+              </span>
             </button>
           </div>
 
-          <nav class="main-nav">
+          <nav class="page-header__main-nav main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="index.html">
@@ -299,6 +301,6 @@
       </section>
 
     </div>
-
+    <script src="../js/script.js"></script>
   </body>
 </html>
