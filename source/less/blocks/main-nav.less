@@ -66,4 +66,21 @@
 
     border: none;
   }
+
+  .main-nav__item--active {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      bottom: 33px;
+      left: 0;
+
+      height: 2px;
+
+      background: @white;
+    }
+  }
 }
