@@ -5,8 +5,6 @@
   color: @darkblue;
 
   background-color: @white;
-
-  outline: 2px solid green;  //времнно
 }
 
 .features__header {
@@ -159,42 +157,80 @@
   .features__desc {
     text-align: left;
     padding: 0;
+    padding-right: 10px;
   }
 
   .features__bonus {
     display: block;
     padding: 0 20px;
-    padding-top: 58px;
+    padding-top: 96px;
     padding-bottom: 52px;
 
     background-color: @white;
-
-    outline: 2px solid green; //временно
   }
 
   .features__bonus-wrapper {
     position: relative;
 
-    min-height: 236px;    //временно
-    padding-top: 40px;
+    padding-bottom: 25px;
     padding-left: 310px;
+    padding-right: 15px;
 
     &::before {
       content: "";
 
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
 
       width: 238px;
       height: 276px;
 
-      background-image: url("../../img/icon-timer.svg");
+      background-image: url("../img/icon-timer.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
-
-      background-color: #ff0000;
+      background-size: 238px auto;
     }
+
+    &::after {
+      content: "24";
+
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+
+      width: 202px;
+      height: 202px;
+
+      font-size: 95px;
+      line-height: 160px;
+      font-weight: bold;
+      color: @pink;
+      text-align: center;
+      vertical-align: middle;
+
+      border: 15px solid @pink;
+      border-radius: 50%;
+
+      box-sizing: border-box;
+    }
+  }
+
+  .features__title-bonus {
+    margin: 0;
+    margin-bottom: 12px;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    color: @black;
+  }
+
+  .features__desc-bonus {
+    margin: 0;
+    margin-bottom: 8px;
+
+    line-height: 24px;
   }
 
   .features__more {
@@ -330,23 +366,56 @@
   .features__bonus {
     padding: 0;
 
-    background-color: transparent;
+    background-color: @lightgray;
   }
 
   .features__bonus-wrapper {
-    min-height: 204px;   //временно
-    padding-top: 115px;
-    padding-bottom: 110px;
-    padding-left: 380px;
+    padding-top: 105px;
+    padding-bottom: 111px;
+    padding-left: 375px;
     padding-right: 10px;
 
-    outline: 2px solid red;  //временно
     &::before {
       top: 17px;
       left: 10px;
 
       width: 298px;
       height: 345px;
+
+      background-size: 298px auto;
     }
+
+    &::after {
+      bottom: 90px;
+      left: 33px;
+
+      width: 253px;
+      height: 253px;
+
+      font-size: 120px;
+      line-height: 200px;
+
+      border-width: 17px;
+    }
+  }
+
+  .features__title-bonus {
+    margin-bottom: 22px;
+  }
+
+  .features__title-bonus br {
+    display: none;
+  }
+
+  .features__desc-bonus {
+    margin-bottom: 33px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .features__more {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
