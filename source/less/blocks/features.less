@@ -6,11 +6,34 @@
 
   background-color: @white;
 
-  outline: 2px solid red;  //времнно
+  outline: 2px solid green;  //времнно
 }
 
 .features__header {
+  position: relative;
+
   padding: 40px 20px;
+  padding-bottom: 55px;
+
+  outline: 2px solid red;  //временно
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 320px;
+    height: 25px;
+
+    background-image: url("../../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 320px auto;
+    background-color: @lightgray;
+  }
 }
 
 .features__intro {
@@ -20,6 +43,10 @@
   font-size: 24px;
   font-weight: lighter;
   text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .features__list {
@@ -29,6 +56,8 @@
 
   padding-top: 80px;
   padding-bottom: 280px;
+
+  background-color: @lightgray;
 
   &::before {
     content: "";

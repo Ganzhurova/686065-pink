@@ -4,28 +4,42 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
+    <svg style="display:none">
+      <symbol viewBox="0 0 50 25" id="icon-menu-burger">
+        <path d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z"/>
+      </symbol>
+      <symbol viewBox="0 0 24 24" id="icon-menu-cross">
+        <path d="M15.087 11.933l8.56-8.559a.75.75 0 0 0 0-1.061L21.554.22a.747.747 0 0 0-1.06 0l-8.561 8.56L3.373.22a.771.771 0 0 0-1.061 0L.22 2.313a.75.75 0 0 0 0 1.061l8.56 8.559-8.56 8.559a.751.751 0 0 0 0 1.062l2.093 2.094a.744.744 0 0 0 1.06 0l8.561-8.56 8.56 8.56a.746.746 0 0 0 1.06 0l2.093-2.094a.751.751 0 0 0 0-1.062l-8.56-8.559z"/>
+      </symbol>
+    </svg>
+
     <div class="container">
 
-      <header class="page-header page-header--nav-closed page-header--nojs">
+      <header class="page-header">
         <div class="page-header__wrapper">
-          <div class="page-header__top">
-            <a class="page-header__logo" href="index.html">
-              <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
-            </a>
-            <button class="page-header__toggle" type="button">
-              <span class="visually-hidden">
-                Открыть меню
-              </span>
-            </button>
-          </div>
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+          </a>
 
-          <nav class="page-header__main-nav main-nav">
+          <nav class="main-nav main-nav--closed main-nav--nojs">
+            <div class="main-nav__top">
+              <button class="main-nav__toggle" type="button">
+                <svg class="main-nav__toggle--burger" width="50" height="25">
+                  <use xlink:href="#icon-menu-burger"></use>
+                </svg>
+                <svg class="main-nav__toggle--cross" width="24" height="24">
+                  <use xlink:href="#icon-menu-cross"></use>
+                </svg>
+                <span class="visually-hidden">
+                  Открыть меню
+                </span>
+              </button>
+            </div>
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="index.html">
@@ -370,6 +384,6 @@
       </footer>
 
     </div>
-<!--    <script src="../js/script.js"></script>-->
+    <script src="../js/script.js"></script>
   </body>
 </html>

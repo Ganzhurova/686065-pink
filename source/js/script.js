@@ -1,14 +1,14 @@
-var header = document.querySelector('.page-header');
-var navToggle = document.querySelector('.page-header__toggle');
+var navMain = document.querySelector('.main-nav');
+var navToggle = document.querySelector('.main-nav__toggle');
 
-header.classList.remove('page-header--nojs');
+navMain.classList.remove('main-nav--nojs');
 
 navToggle.addEventListener('click', function() {
-  if (header.classList.contains('page-header--nav-closed')) {
-    header.classList.remove('page-header--nav-closed');
-    header.classList.add('page-header--nav-opened');
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
   } else {
-    header.classList.add('page-header--nav-closed');
-    header.classList.remove('page-header--nav-opened');
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
   }
 });
