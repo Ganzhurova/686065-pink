@@ -15,8 +15,6 @@
   padding: 40px 20px;
   padding-bottom: 55px;
 
-  outline: 2px solid red;  //временно
-
   &::after {
     content: "";
 
@@ -28,7 +26,7 @@
     width: 320px;
     height: 25px;
 
-    background-image: url("../../img/bg-triangle-white.svg");
+    background-image: url("../img/bg-triangle-white.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 320px auto;
@@ -112,8 +110,22 @@
   }
 
   .features__header {
-    min-height: 98px;  //временно
-    padding: 70px 20px;
+    padding: 48px 20px;
+    padding-bottom: 100px;
+
+    &::after {
+      width: 660px;
+      height: 53px;
+
+      background-size: 660px auto;
+    }
+  }
+
+  .features__intro {
+    margin-bottom: 2px;
+
+    font-size: 40px;
+    line-height: 48px;
   }
 
   .features__list {
@@ -203,10 +215,22 @@
   }
 
   .features__header {
-    min-height: 177px; //временно
-    padding: 70px 0;
+    padding: 70px 10px;
+    padding-bottom: 170px;
 
-    outline: 2px solid red;   //временно
+    &::after {
+      width: 960px;
+      height: 76px;
+
+      background-size: 960px auto;
+    }
+  }
+
+  .features__intro {
+    margin-bottom: 2px;
+
+    font-size: 50px;
+    line-height: 58px;
   }
 
   .features__list {

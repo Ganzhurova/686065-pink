@@ -178,7 +178,6 @@
     .main-nav__list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
   }
 
@@ -196,6 +195,14 @@
     text-transform: none;
 
     border: none;
+  }
+
+  .main-nav__item {
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .main-nav__item--active {
