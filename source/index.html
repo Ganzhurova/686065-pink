@@ -115,20 +115,23 @@
           </div>
         </div>
 
-        <section class="features">
-          <div class="features__wrapper">
 
-            <header class="features__header">
-              <h2 class="visually-hidden">
-                Наши возможности
-              </h2>
-              <p class="features__intro">
+          <header class="page-main__header">
+            <div class="page-main__header-wrapper">
+              <p class="page-main__intro">
                 Устали от серости мегаполиса?
               </p>
-              <p class="features__intro">
+              <p class="page-main__intro">
                 Нам есть, что вам<br> предложить!
               </p>
-            </header>
+            </div>
+          </header>
+
+        <section class="features">
+          <div class="features__wrapper">
+            <h2 class="visually-hidden">
+              Наши возможности
+            </h2>
 
             <ul class="features__list">
 
@@ -179,9 +182,26 @@
             <h2 class="visually-hidden">
               Отзывы о нас
             </h2>
+
+            <input class="review-1 visually-hidden" type="radio" id="review-1" name="toggle" checked>
+            <input class="review-2 visually-hidden" type="radio" id="review-2" name="toggle">
+            <input class="review-3 visually-hidden" type="radio" id="review-3" name="toggle">
+
+            <div class="slider-controls">
+              <label class="slider-controls__item slider-controls__item--1" for="review-1">
+                Первый
+              </label>
+              <label class="slider-controls__item slider-controls__item--2" for="review-2">
+                Второй
+              </label>
+              <label class="slider-controls__item slider-controls__item--3" for="review-3">
+                Третий
+              </label>
+            </div>
+
             <div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
-                <span class="reviews__autor-name">Николай Петров</span>
+                <cite class="reviews__autor-name">Николай Петров</cite>
                 <span class="reviews__autor-desc reviews__autor-desc--visibility">
                   25 лет, водитель трамвая
                 </span>
@@ -189,7 +209,28 @@
                   «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
                 </p>
               </blockquote>
+              <blockquote class="reviews__item slider__item">
+                <cite class="reviews__autor-name">Антон Иванов</cite>
+                <span class="reviews__autor-desc reviews__autor-desc--visibility">
+                  27 лет, врач
+                </span>
+                <p class="reviews__text">
+                  «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!»
+                </p>
+              </blockquote>
+              <blockquote class="reviews__item slider__item">
+                <cite class="reviews__autor-name">Сергей Степанов</cite>
+                <span class="reviews__autor-desc reviews__autor-desc--visibility">
+                  30 лет, строитель
+                </span>
+                <p class="reviews__text">
+                  «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! Теперь фотографирую постоянно.»
+                </p>
+              </blockquote>
             </div>
+
+
+            <!--
             <p class="reviews__toggles slider__toggles">
               <button class="slider__toggle" type="button">
                 1
