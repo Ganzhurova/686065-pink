@@ -245,79 +245,127 @@
         </section>
 
         <section class="rates">
-          <div class="rates__wrapper slider">
+          <div class="rates__wrapper slider__table">
             <h2 class="visually-hidden">
               Наши тарифы
             </h2>
 
-            <table class="rates__list slider__list">
-              <col class="rates__item slider__item">
-              <col class="rates__item slider__item">
-              <col class="rates__item slider__item">
-              <tr>
-                <th class="rates__caption visually-hidden">
-                  Опции
-                </th>
-                <th class="rates__caption">
-                  База
-                  <span class="rates__price">
-                    1,99 USD
-                  </span>
-                </th>
-                <th class="rates__caption rates__caption--hit">
-                  <span class="rates__rating inscription">
-                    Хит
-                  </span>
-                  Стандарт
-                  <span class="rates__price">
-                    3,99 USD
-                  </span>
-                </th>
-                <th class="rates__caption">
-                  Анлим
-                  <span class="rates__price">
-                    1,99 USD
-                  </span>
-                </th>
-              </tr>
+            <input class="rates-1 visually-hidden" type="radio" id="rates-1" name="rates-toggle" checked>
+            <input class="rates-2 visually-hidden" type="radio" id="rates-2" name="rates-toggle">
+            <input class="rates-3 visually-hidden" type="radio" id="rates-3" name="rates-toggle">
 
-              <tr>
-                <td class="rates__field">
-                  Розовый фильтр
-                </td>
-                <td class="rates__field rates__field--yes">
-                </td>
-                <td class="rates__field rates__field--yes">
-                </td>
-                <td class="rates__field rates__field--yes">
-                </td>
-              </tr>
+            <div class="slider-rates">
+              <label class="slider-rates__item slider-rates__item--1" for="rates-1">
+                Первый
+              </label>
+              <label class="slider-rates__item slider-rates__item--2" for="rates-2">
+                Второй
+              </label>
+              <label class="slider-rates__item slider-rates__item--3" for="rates-3">
+                Третий
+              </label>
+            </div>
 
-              <tr>
-                <td class="rates__field">
-                  Смайлики
-                </td>
-                <td class="rates__field rates__field--no">
-                </td>
-                <td class="rates__field rates__field--yes">
-                </td>
-                <td class="rates__field rates__field--yes">
-                </td>
-              </tr>
+            <div class="slider__inner">
+              <div class="rates__table slider__table-list">
+                <header>
+                  <ul>
+                    <li class="rates__field visually-hidden">
+                      Опции
+                    </li>
+                    <li class="rates__caption">
+                      База
+                      <span class="rates__price">
+                        1,99 USD
+                      </span>
+                    </li>
+                    <li class="rates__caption rates__caption--hit">
+                      <div class="rates__hit">
+                        <span class="rates__rating">
+                          Хит
+                        </span>
+                      </div>
+                      Стандарт
+                      <span class="rates__price">
+                        3,99 USD
+                      </span>
+                    </li>
+                    <li class="rates__caption">
+                      Анлим
+                      <span class="rates__price">
+                        9,99 USD
+                      </span>
+                    </li>
+                  </ul>
+                </header>
 
-              <tr>
-                <td class="rates__field">
-                  Комментарии
-                </td>
-                <td class="rates__field rates__field--no">
-                </td>
-                <td class="rates__field rates__field--no">
-                </td>
-                <td class="rates__field rates__field--yes">
-                </td>
-              </tr>
-            </table>
+                <div class="rates__content">
+                  <ul>
+                    <li class="rates__field">
+                      Розовый фильтр
+                    </li>
+                    <li class="rates__field rates__field--yes">
+                      <span class="rates__field--option">
+                        Розовый фильтр
+                      </span>
+                    </li>
+                    <li class="rates__field rates__field--yes">
+                      <span class="rates__field--option">
+                        Розовый фильтр
+                      </span>
+                    </li>
+                    <li class="rates__field rates__field--yes">
+                      <span class="rates__field--option">
+                        Розовый фильтр
+                      </span>
+                    </li>
+                  </ul>
 
+                  <ul>
+                    <li class="rates__field">
+                      Смайлики
+                    </li>
+                    <li class="rates__field rates__field--no">
+                      <span class="rates__field--option">
+                        Смайлики
+                      </span>
+                    </li>
+                    <li class="rates__field rates__field--yes">
+                      <span class="rates__field--option">
+                        Смайлики
+                      </span>
+                    </li>
+                    <li class="rates__field rates__field--yes">
+                      <span class="rates__field--option">
+                        Смайлики
+                      </span>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <li class="rates__field">
+                      Комментарии
+                    </li>
+                    <li class="rates__field  rates__field--no">
+                      <span class="rates__field--option">
+                        Комментарии
+                      </span>
+                    </li>
+                    <li class="rates__field rates__field--no">
+                      <span class="rates__field--option">
+                        Комментарии
+                      </span>
+                    </li>
+                    <li class="rates__field rates__field--yes">
+                      <span class="rates__field--option">
+                        Комментарии
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+<!--
             <p class="rates__toggles slider__toggles rates__toggles--visibility">
               <button class="slider__toggle" type="button">
                 1
@@ -332,7 +380,7 @@
               <button class="slider__toggle" type="button">
                 3
               </button>
-            </p>
+            </p>-->
           </div>
         </section>
 
