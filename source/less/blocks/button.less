@@ -42,6 +42,19 @@
   background-color: transparent;
   border: 3px solid @pink;
   border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    color: @white;
+
+    background-color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+
+    background-color: @pink;
+  }
 }
 
 .button--filter-cancel {
@@ -50,6 +63,20 @@
   background-color: transparent;
   border: 3px solid fade(@darkblue, 10%);
   border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    color: fade(@darkblue, 30%);
+
+    border-color: fade(@darkblue, 30%);
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+
+    background-color: fade(@darkblue, 30%);
+    border: none;
+  }
 }
 
 .button--form {

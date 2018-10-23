@@ -5,20 +5,16 @@
   color: @darkblue;
 
   background-color: @white;
-
-  outline: 2px solid red;   //временно
 }
 
 .filter__header {
   padding: 0 20px;
-  padding-top: 42px;
+  padding-top: 40px;
   padding-bottom: 42px;
 
   text-align: center;
 
   background-color: @white;
-
-  outline: 2px solid aqua;    //временно
 }
 
 .filter__intro {
@@ -40,18 +36,52 @@
 }
 
 .filter__options {
-  min-height: 161px;     //временно
-  border-bottom: 1px solid fade(@darkblue, 10%);
+  padding-top: 42px;
+}
 
-  outline: 2px solid aqua;   //временно
+.filter__item {
+  padding-top: 36px;
+  padding-bottom: 34px;
+
+  border-bottom: 1px solid fade(@darkblue, 10%);
+}
+
+.filter__range {
+  position: relative;
+}
+
+.filter__scale {
+  width: 240px;
+  height: 2px;
+  margin: 0 auto;
+
+  background-color: @darkblue;
+}
+
+.filter__slider {
+  position: absolute;
+
+  top: -6px;
+  left: 231px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: @white;
+  border: 2px solid @pink;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &:active {
+    background-color: @pink;
+  }
 }
 
 .filter__buttons {
   display: flex;
   flex-direction: column;
   padding: 38px 20px;
-
-  outline: 2px solid aqua;    //временно
 }
 
 .filter__button {
@@ -63,6 +93,60 @@
   margin-bottom: 12px;
 }
 
+@media (max-width: @mobile-width-only) {
+  .filter__preview {
+    display: none;
+  }
+
+  .filter__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 48px;
+    margin: 0 auto;
+  }
+
+  .filter__icon {
+    fill: fade(@darkblue, 30%);
+
+    &:hover {
+      fill: fade(@darkblue, 50%);
+    }
+  }
+
+  .filter__icon--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .filter__icon--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .filter__icon--contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .filter__item {
+    display: none;
+  }
+
+  .filter__crop:checked ~ .filter__list .filter__item:nth-child(1),
+  .filter__fill:checked ~ .filter__list .filter__item:nth-child(2),
+  .filter__contrast:checked ~ .filter__list .filter__item:nth-child(3) {
+    display: block;
+  }
+
+  .filter__crop:checked ~ .filter__icons .filter__icon--crop,
+  .filter__fill:checked ~ .filter__icons .filter__icon--fill,
+  .filter__contrast:checked ~ .filter__icons .filter__icon--contrast {
+    fill: @pink;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .filter {
     width: 660px;
@@ -71,7 +155,9 @@
   .filter__header {
     padding-top: 44px;
     padding-bottom: 67px;
+  }
 
+  .filter__intro {
     font-size: 18px;
   }
 
@@ -94,7 +180,76 @@
   }
 
   .filter__options {
-    min-height: 198px;    //временно
+    padding-top: 0;
+  }
+
+  .filter__icons {
+    display: none;
+  }
+
+  .filter__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 275px;
+    padding: 0;
+  }
+
+  .filter__item--crop {
+    padding-top: 12px;
+    padding-bottom: 24px;
+
+    .filter__slider {
+      left: 146px;
+    }
+  }
+
+  .filter__item--fill {
+    padding-top: 27px;
+    padding-bottom: 23px;
+
+    .filter__slider {
+      left: 25px;
+    }
+  }
+
+  .filter__item--contrast {
+    padding-top: 27px;
+    padding-bottom: 26px;
+
+    .filter__slider {
+      left: 96px;
+    }
+  }
+
+  .filter__preview {
+    padding-left: 2px;
+
+    fill: @pink;
+  }
+
+  .filter__preview--crop {
+    width: 22px;
+    height: 22px;
+  }
+
+  .filter__preview--fill {
+    width: 24px;
+    height: 22px;
+  }
+
+  .filter__preview--contrast {
+    width: 16px;
+    height: 16px;
+  }
+
+  .filter__range {
+    margin-right: 20px;
+  }
+
+  .filter__scale {
+    width: 202px;
+    margin: 0;
   }
 
   .filter__buttons {
@@ -119,7 +274,6 @@
   .filter__wrapper {
     width: 960px;
     margin: 0 auto;
-    padding: 0 10px;
   }
 
   .filter__header {
@@ -133,6 +287,60 @@
 
   .filter__photo-wrapper {
     margin-right: 90px;
+  }
+
+  .filter__item {
+    width: 410px;
+  }
+
+  .filter__item--crop {
+    padding-top: 0;
+    padding-bottom: 9px;
+
+    .filter__slider {
+      left: 146px;
+    }
+  }
+
+  .filter__item--fill {
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    .filter__slider {
+      left: 25px;
+    }
+  }
+
+  .filter__item--contrast {
+    padding-top: 18px;
+    padding-bottom: 19px;
+
+    .filter__slider {
+      left: 96px;
+    }
+  }
+
+  .filter__preview--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .filter__preview--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .filter__preview--contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .filter__range {
+    margin-right: 28px;
+  }
+
+  .filter__scale {
+    width: 288px;
   }
 
   .filter__buttons {

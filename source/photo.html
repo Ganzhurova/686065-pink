@@ -16,6 +16,16 @@
       <symbol viewBox="0 0 24 24" id="icon-menu-cross">
         <path d="M15.087 11.933l8.56-8.559a.75.75 0 0 0 0-1.061L21.554.22a.747.747 0 0 0-1.06 0l-8.561 8.56L3.373.22a.771.771 0 0 0-1.061 0L.22 2.313a.75.75 0 0 0 0 1.061l8.56 8.559-8.56 8.559a.751.751 0 0 0 0 1.062l2.093 2.094a.744.744 0 0 0 1.06 0l8.561-8.56 8.56 8.56a.746.746 0 0 0 1.06 0l2.093-2.094a.751.751 0 0 0 0-1.062l-8.56-8.559z"/>
       </symbol>
+      <symbol viewBox="0 0 48 48" id="icon-editor-crop">
+        <path d="M34 30h4V14c0-2.21-1.79-4-4-4H18v4h16v16zm-20 4V2h-4v8H2v4h8v20c0 2.21 1.79 4 4 4h20v8h4v-8h8v-4H14z"/>
+      </symbol>
+      <symbol viewBox="0 0 48 48" id="icon-editor-fill">
+        <path d="M33.12 17.88L15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11c.58.59 1.35.88 2.12.88s1.54-.29 2.12-.88l11-11a3 3 0 0 0 0-4.24zM10.41 20L20 10.42 29.59 20H10.41zM38 23s-4 4.33-4 7c0 2.21 1.79 4 4 4s4-1.79 4-4c0-2.67-4-7-4-7zM0 40h48v3H0z"/>
+      </symbol>
+      <symbol viewBox="-35.422 -7.96 32 32" id="icon-editor-contrast">
+        <path d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"/>
+        <path d="M-19.462 16.331a8.519 8.519 0 0 0 8.52-8.52 8.518 8.518 0 0 0-8.52-8.519"/>
+      </symbol>
     </svg>
 
     <div class="container">
@@ -291,39 +301,68 @@
             <form class="filter__photo" method="get" action="https://echo.htmlacademy.ru">
 
               <div class="filter__photo-wrapper">
-                <img class="filter__user-photo" src="http://placehold.it/150x100" alt="Фотография пользователя">
+                <img class="filter__user-photo" src="img/photo-road-mobile@1x.jpg" alt="Фотография пользователя">
               </div>
 
               <div class="filter__control-wrapper">
                 <div class="filter__options">
-                  <input class="filter__option" type="radio" name="settings" id="filter-crop" value="crop" checked>
-                  <input class="filter__option" type="radio" name="settings" id="filter-color" value="color">
-                  <input class="filter__option" type="radio" name="settings" id="filter-brightness" value="brightness">
+
+                  <input class="filter__crop visually-hidden" type="radio" name="settings" id="filter-crop" checked>
+                  <input class="filter__fill visually-hidden" type="radio" name="settings" id="filter-fill">
+                  <input class="filter__contrast visually-hidden" type="radio" name="settings" id="filter-contrast">
+
                   <div class="filter__icons">
                     <label class="filter__icon filter__icon--crop" for="filter-crop">
+                      <svg class="filter__toggle filter__toggle--crop" width="44" height="44">
+                        <use xlink:href="#icon-editor-crop"></use>
+                      </svg>
                     </label>
-                    <label class="filter__icon filter__icon--color" for="filter-color">
+                    <label class="filter__icon filter__icon--fill" for="filter-fill">
+                      <svg class="filter__toggle filter__toggle--fill" width="48" height="43">
+                        <use xlink:href="#icon-editor-fill"></use>
+                      </svg>
                     </label>
-                    <label class="filter__icon filter__icon--brightness" for="filter-brightness">
+                    <label class="filter__icon filter__icon--contrast" for="filter-contrast">
+                      <svg class="filter__toggle filter__toggle--contrast" width="32" height="32">
+                        <use xlink:href="#icon-editor-contrast"></use>
+                      </svg>
                     </label>
                   </div>
-                  <div class="filter__range-controls">
-                    <div class="range">
-                      <div class="range__scale">
-                      </div>
-                      <div class="range__slider">
+
+                  <div class="filter__list">
+                    <div class="filter__item filter__item--crop">
+                      <svg class="filter__preview filter__preview--crop" width="44" height="44">
+                        <use xlink:href="#icon-editor-crop"></use>
+                      </svg>
+                      <div class="filter__range">
+                        <div class="filter__scale">
+                        </div>
+                        <div class="filter__slider">
+                        </div>
                       </div>
                     </div>
-                    <div class="range">
-                      <div class="range__scale">
-                      </div>
-                      <div class="range__slider">
+
+                    <div class="filter__item filter__item--fill">
+                      <svg class="filter__preview filter__preview--fill" width="48" height="43">
+                        <use xlink:href="#icon-editor-fill"></use>
+                      </svg>
+                      <div class="filter__range">
+                        <div class="filter__scale">
+                        </div>
+                        <div class="filter__slider">
+                        </div>
                       </div>
                     </div>
-                    <div class="range">
-                      <div class="range__scale">
-                      </div>
-                      <div class="range__slider">
+
+                    <div class="filter__item filter__item--contrast">
+                      <svg class="filter__preview filter__preview--contrast" width="32" height="32">
+                        <use xlink:href="#icon-editor-contrast"></use>
+                      </svg>
+                      <div class="filter__range">
+                        <div class="filter__scale">
+                        </div>
+                        <div class="filter__slider">
+                        </div>
                       </div>
                     </div>
                   </div>
