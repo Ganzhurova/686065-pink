@@ -1,14 +1,41 @@
 .copyright {
   display: flex;
   justify-content: space-between;
-  width: 140px;
+  width: 128px;
 }
 
 .copyright__text {
   display: block;
+  margin: 0;
+  padding: 0;
+
   font-weight: normal;
 }
 
 .copyright__link {
   display: block;
+  margin: 0;
+  padding: 0;
+
+  svg {
+    fill: @pink;
+
+    &:hover {
+      fill: @darkblue;
+    }
+
+    &:active {
+      fill: fade(@darkblue, 30%);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    width: 150px;
+  }
+
+  .copyright__text {
+    font-size: 18px;
+  }
 }

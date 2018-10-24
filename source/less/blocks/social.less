@@ -1,4 +1,38 @@
 .social__list {
-  .reset-list;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .reset-list;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+
+  background-color: @white;
+  border: 3px solid fade(@darkblue, 10%);
+  border-radius: 50%;
+
+  &:hover {
+    border-color: @darkblue;
+  }
+
+  &:active {
+    border-color: fade(@darkblue, 10%);
+  }
+}
+
+.social__link svg {
+  fill: @pink;
+
+  &:hover {
+    fill: @pink;
+  }
+
+  &:active {
+    fill: fade(@pink, 30%);
+  }
 }
