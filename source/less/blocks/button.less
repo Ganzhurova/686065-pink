@@ -86,4 +86,24 @@
   background-color: @green;
   border: 1px solid @green;
   border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    border-color: #1c9b5e;
+    border-collapse: #1c9b5e;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: @white;
+
+    background-color: #e5e5e5;
+    border: 1px solid #e5e5e5;
+
+    cursor: default;
+  }
 }

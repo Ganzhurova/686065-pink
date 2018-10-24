@@ -23,16 +23,22 @@
   &:active {
     border-color: fade(@darkblue, 10%);
   }
+
+  & svg {
+    fill: @pink;
+  }
 }
 
+.social__link,
 .social__link svg {
-  fill: @pink;
-
   &:hover {
+    border-color: @darkblue;
+
     fill: @pink;
   }
 
   &:active {
+    border-color: fade(@darkblue, 10%);
     fill: fade(@pink, 30%);
   }
 }

@@ -186,18 +186,22 @@
               </legend>
 
               <div class="form__group-wrapper">
-                <p class="form__paragraph">
+                <p class="form__paragraph form__paragraph--tel">
                   <label class="form__title-field" for="form-tel">
                     Номер телефона
                   </label>
-                  <input class="form__field" type="text" name="tel" id="form-tel" placeholder="Номер, пожалуйста">
+                  <span class="form__field-wrapper form__field-wrapper--tel">
+                    <input class="form__field " type="text" name="tel" id="form-tel" placeholder="Номер, пожалуйста">
+                  </span>
                 </p>
 
-                <p class="form__paragraph">
+                <p class="form__paragraph form__paragraph--email">
                   <label class="form__title-field" for="form-email">
                     Адрес почты
                   </label>
-                  <input class="form__field" type="text" name="email" id="form-email" placeholder="Введите почту *" required>
+                  <span class="form__field-wrapper form__field-wrapper--email">
+                    <input class="form__field" type="text" name="email" id="form-email" placeholder="Введите почту *" required>
+                  </span>
                 </p>
               </div>
             </fieldset>
@@ -345,6 +349,6 @@
       </section>
 
     </div>
-    <script src="../js/script.js"></script>
+<!--    <script src="../js/script.js"></script>-->
   </body>
 </html>
