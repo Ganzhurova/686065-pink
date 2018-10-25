@@ -8,8 +8,6 @@
   background-color: @lightgray;
 
   overflow: hidden;
-
-  outline: 2px solid red;
 }
 
 .map__interactive {
@@ -44,6 +42,18 @@
     width: 660px;
     height: 375px;
   }
+
+  .map__marker {
+    top: 195px;
+    right: 0;
+    left: 0;
+
+    margin: auto;
+  }
+
+  .map__image {
+    bottom: -110px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -51,5 +61,17 @@
     width: auto;
     height: 520px;
     margin: 0;
+  }
+
+  .map__marker {
+    top: 280px;
+  }
+
+  .map__image {
+    left: 0;
+    right: 0;
+    bottom: -195px;
+
+    margin: auto;
   }
 }

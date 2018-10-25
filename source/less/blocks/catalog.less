@@ -5,15 +5,11 @@
   color: @darkblue;
 
   background-color: @white;
-
-  outline: 2px solid red;   //временно
 }
 
 .catalog__header {
   padding: 45px 20px;
   padding-bottom: 50px;
-
-  outline: 2px solid aqua;   //временно
 }
 
 .catalog__intro {
@@ -27,19 +23,22 @@
 }
 
 .catalog__photo-wrapper {
-  position: relative;
-
   width: 320px;
   height: 137px;
   margin: 0;
+}
 
-  outline: 2px solid green;   //временно
+.catalog__photo-wrapper a {
+  position: relative;
+
+  display: block;
 }
 
 .catalog__rating {
   position: absolute;
   top: 0;
   right: 20px;
+  z-index: 2;
 
   display: block;
 
@@ -66,8 +65,6 @@
   padding-right: 20px;
 
   background-color: @lightgray;
-
-  outline: 2px solid green;   //временно
 }
 
 .catalog__top-photo .catalog__text-wrapper {
@@ -79,8 +76,6 @@
   margin-bottom: 20px;
 
   background-color: @lightgray;
-
-  outline: 2px solid blue;   //временно
 }
 
 .catalog__picture {
@@ -88,8 +83,6 @@
   width: 280px;
   height: 180px;
   margin: 0;
-
-  outline: 2px solid green;   //временно
 }
 
 .catalog__autor {
@@ -176,7 +169,10 @@
   .catalog__photo-wrapper {
     width: 660px;
     height: 509px;
-    margin: 0;
+  }
+
+  .catalog__picture-1 {
+    height: 100%;
   }
 
   .catalog__rating {
@@ -255,11 +251,6 @@
     margin: 0;
   }
 
-  .catalog__wrapper {
-    width: 960px;
-    margin: 0 auto;
-  }
-
   .catalog__header {
     padding: 0 10px;
     padding-top: 95px;
@@ -275,17 +266,41 @@
     height: 506px;
   }
 
+  .catalog__photo-wrapper a {
+    max-width: 1200px;
+    min-width: 960px;
+    height: 506px;
+    margin: 0 auto;
+
+    overflow: hidden;
+  }
+
+  .catalog__picture-1 {
+    position: absolute;
+    left: 50%;
+
+    width: 1200px;
+    height: 506px;
+
+    transform: translate(-50%, 0);
+  }
+
   .catalog__rating {
     top: 54px;
     right: 10px;
   }
 
   .catalog__top-photo .catalog__text-wrapper {
-    padding: 0 20px;
+    width: 880px;
+    margin: 0 auto;
+    padding: 0 30px;
     padding-top: 25px;
     padding-bottom: 20px;
+  }
 
-    outline: 2px solid aqua;     //временно
+  .catalog__wrapper {
+    width: 960px;
+    margin: 0 auto;
   }
 
   .catalog__list {
