@@ -1,18 +1,44 @@
 .reviews {
+  position: relative;
+
   width: 320px;
-  min-height: 352px; //временно
   margin: 0 auto;
 
   color: @darkblue;
 
   background-color: @white;
 
-  outline: 2px solid red;
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-top: 8%;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% auto;
+    background-color: @lightgray;
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+
+  height: 235px;
+  padding: 0 25px;
+  padding-top: 42px;
+  padding-bottom: 100px;
 }
 
 .reviews__item {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  padding: 40px 20px;
 }
 
 .reviews__autor-name {
@@ -43,21 +69,110 @@
   text-align: center;
 }
 
-.reviews__toggles {
-  display: inline-block;      //временно
-  margin: 0;
+.slider__item {
+  display: none;
+}
+
+.slider-arrow {
+  display: none;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 290px;
+  left: 50%;
+
+  width: 66px;
+  height: 30px;
+  margin-left: -33px;
+
+  font-size: 0;
+}
+
+.slider-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  padding: 8px;
+
+  vertical-align: middle;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: fade(@darkblue, 30%);
+    border-radius: 50%;
+  }
+
+  &:hover::after {
+    background-color: fade(@darkblue, 60%);
+  }
+
+  &:active::after {
+    background-color: fade(@darkblue, 10%);
+  }
+}
+
+.review-1:checked ~ .slider__list .slider__item:nth-child(1) {
+  display: flex;
+}
+
+.review-2:checked ~ .slider__list .slider__item:nth-child(2) {
+  display: flex;
+}
+
+.review-3:checked ~ .slider__list .slider__item:nth-child(3) {
+  display: flex;
+}
+
+.review-1:checked ~ .slider-controls .slider-controls__item--1::before,
+.review-2:checked ~ .slider-controls .slider-controls__item--2::before,
+.review-3:checked ~ .slider-controls .slider-controls__item--3::before {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: @white;
+  border: 3px solid @darkblue;
+  border-radius: 50%;
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
     width: 660px;
-    min-height: 300px;  //временно
   }
 
-  .reviews__item {
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
+  .reviews__wrapper {
+    height: 185px;
+    padding: 0 20px;
+    padding-top: 45px;
+    padding-bottom: 120px;
+  }
+
+  .reviews__autor-name {
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .reviews__autor-desc--visibility {
@@ -66,11 +181,14 @@
 
   .reviews__text {
     order: -1;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
+
+    font-size: 18px;
+    line-height: 30px;
   }
 
-  .reviews__toggles {
-    display: none;       //временно
+  .slider-controls {
+    top: 260px;
   }
 }
 
@@ -81,10 +199,100 @@
   }
 
   .reviews__wrapper {
-    width: 960px;
-    min-height: 415px;
+    width: 684px;
+    height: 187px;
     margin: 0 auto;
+    padding: 0 138px;
+    padding-top: 185px;
+    padding-bottom: 140px;
 
-    outline: 2px solid red;
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 72px;
+      left: 50%;
+
+      width: 79px;
+      height: 64px;
+      margin-left: -40px;
+
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 79px auto;
+    }
+  }
+
+  .reviews__autor-name {
+    margin-bottom: 2px;
+
+    font-size: 24px;
+  }
+
+  .reviews__autor-desc {
+    font-size: 18px;
+  }
+
+  .slider-controls {
+    display: none;
+  }
+
+  .slider-arrow {
+    display: block;
+    width: 0;
+    height: 0;
+
+    font-size: 0;
+  }
+
+  .slider-arrow label {
+    opacity: 0.3;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .review-1:checked ~ .slider-arrow .slider-arrow__item--3,
+  .review-2:checked ~ .slider-arrow .slider-arrow__item--1,
+  .review-3:checked ~ .slider-arrow .slider-arrow__item--2 {
+    position: absolute;
+    top: 213px;
+    left: -20px;
+
+    display: block;
+    width: 22px;
+    height: 42px;
+    margin-left: 30px;
+
+    background-image: url("../img/icon-review-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 22px auto;
+  }
+
+  .review-1:checked ~ .slider-arrow .slider-arrow__item--2,
+  .review-2:checked ~ .slider-arrow .slider-arrow__item--3,
+  .review-3:checked ~ .slider-arrow .slider-arrow__item--1 {
+    position: absolute;
+    top: 213px;
+    right: -20px;
+
+    display: block;
+    width: 22px;
+    height: 42px;
+    margin-right: 30px;
+
+    background-image: url("../img/icon-review-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 22px auto;
   }
 }

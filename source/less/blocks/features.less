@@ -5,25 +5,6 @@
   color: @darkblue;
 
   background-color: @white;
-
-  outline: 2px solid red;
-}
-
-.features__header {
-  min-height: 140px; //временно
-  padding: 40px 20px;
-}
-
-.features__intro {
-  margin: 0;
-
-  font-size: 24px;
-  font-weight: lighter;
-  text-align: center;
-}
-
-.features__wrapper {
-  background-color: @lightgray;
 }
 
 .features__list {
@@ -31,8 +12,10 @@
 
   .reset-list;
 
-  padding-top: 80px;
-  padding-bottom: 280px;
+  padding-top: 57px;
+  padding-bottom: 287px;
+
+  background-color: @lightgray;
 
   &::before {
     content: "";
@@ -42,26 +25,25 @@
     left: 0;
     right: 0;
 
-    width: 160px;
+    width: 157px;
     height: 277px;
     margin: auto;
 
-    background-image: url("../../img/iphone-screen-mobile@1x.png");
+    background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: 157px auto;
   }
 }
 
 .features__item {
-  padding: 0 20px;
+  padding: 0 30px;
   padding-bottom: 30px;
-
-  outline: 2px solid aqua; //временно
 }
 
 .features__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   font-size: 18px;
   line-height: 24px;
@@ -86,33 +68,29 @@
     width: 660px;
   }
 
-  .features__header {
-    min-height: 98px;  //временно
-    padding: 70px 20px;
-  }
-
   .features__list {
-    padding-bottom: 0;
+    padding-top: 22px;
+    padding-bottom: 7px;
     padding-left: 330px;
     padding-right: 20px;
 
     &::before {
-      top: 10px;
-      bottom: auto;
       left: 20px;
       right: auto;
+      z-index: 2;
 
       width: 268px;
-      height: 482px;
+      height: 481px;
 
-      background-image: url("../../img/iphone-screen-3-tablet@1x.png");
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+      background-size: 268px auto;
     }
   }
 
   .features__item {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 35px;
+    padding-bottom: 34px;
   }
 
   .features__title {
@@ -122,42 +100,80 @@
   .features__desc {
     text-align: left;
     padding: 0;
+    padding-right: 10px;
   }
 
   .features__bonus {
     display: block;
     padding: 0 20px;
-    padding-top: 58px;
+    padding-top: 96px;
     padding-bottom: 52px;
 
     background-color: @white;
-
-    outline: 2px solid green; //временно
   }
 
   .features__bonus-wrapper {
     position: relative;
 
-    min-height: 236px;    //временно
-    padding-top: 40px;
+    padding-bottom: 25px;
     padding-left: 310px;
+    padding-right: 15px;
 
     &::before {
       content: "";
 
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
 
       width: 238px;
       height: 276px;
 
-      background-image: url("../../img/icon-timer.svg");
+      background-image: url("../img/icon-timer.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
-
-      background-color: #ff0000;
+      background-size: 238px auto;
     }
+
+    &::after {
+      content: "24";
+
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+
+      width: 202px;
+      height: 202px;
+
+      font-size: 95px;
+      line-height: 160px;
+      font-weight: bold;
+      color: @pink;
+      text-align: center;
+      vertical-align: middle;
+
+      border: 15px solid @pink;
+      border-radius: 50%;
+
+      box-sizing: border-box;
+    }
+  }
+
+  .features__title-bonus {
+    margin: 0;
+    margin-bottom: 12px;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+    color: @black;
+  }
+
+  .features__desc-bonus {
+    margin: 0;
+    margin-bottom: 8px;
+
+    line-height: 24px;
   }
 
   .features__more {
@@ -170,18 +186,14 @@
 @media (min-width: @desktop-width) {
   .features {
     width: auto;
+    margin: 0;
+
+    background-color: @lightgray;
   }
 
   .features__wrapper {
     width: 960px;
     margin: 0 auto;
-  }
-
-  .features__header {
-    min-height: 177px; //временно
-    padding: 70px 0;
-
-    outline: 2px solid red;   //временно
   }
 
   .features__list {
@@ -194,35 +206,31 @@
     &::before {
       display: none;
     }
-
-    outline: 2px solid red; //временно
   }
 
   .features__item {
     position: relative;
 
-    width: 240px;
-    padding-top: 360px;
+    width: 292px;
+    padding-top: 260px;
     padding-bottom: 50px;
-    padding-left: 25px;
-    padding-right: 30px;
 
     &:first-child {
       &::before {
         content: "";
 
         position: absolute;
-        top: 5px;
+        top: -95px;
         left: 0;
+        z-index: 2;
 
         width: 292px;
-        height: 305px;
+        height: 302px;
 
-        background-image: url("../../img/iphone-screen-1-desktop@1x.png");
+        background-image: url("../img/iphone-screen-1-desktop@1x.png");
         background-repeat: no-repeat;
         background-position: 0 0;
-
-        outline: 2px solid red; //временно
+        background-size: 292px auto;
       }
     }
 
@@ -231,15 +239,17 @@
         content: "";
 
         position: absolute;
-        top: 5px;
+        top: -95px;
         left: 0;
+        z-index: 2;
 
         width: 292px;
-        height: 305px;
+        height: 302px;
 
-        background-image: url("../../img/iphone-screen-2-desktop@1x.png");
+        background-image: url("../img/iphone-screen-2-desktop@1x.png");
         background-repeat: no-repeat;
         background-position: 0 0;
+        background-size: 292px auto;
       }
     }
 
@@ -248,21 +258,24 @@
         content: "";
 
         position: absolute;
-        top: 5px;
+        top: -95px;
         left: 0;
+        z-index: 2;
 
         width: 292px;
-        height: 305px;
+        height: 302px;
 
-        background-image: url("../../img/iphone-screen-3-desktop@1x.png");
+        background-image: url("../img/iphone-screen-3-desktop@1x.png");
         background-repeat: no-repeat;
         background-position: 0 0;
+        background-size: 292px auto;
       }
     }
   }
 
   .features__title {
     margin-bottom: 25px;
+    padding: 0 30px;
 
     font-size: 30px;
     line-height: 30px;
@@ -270,44 +283,66 @@
   }
 
   .features__desc {
+    padding: 0 30px;
+
     font-size: 18px;
     line-height: 30px;
     text-align: center;
   }
 
-  .features__photo-list {
-    display: flex;
-    justify-content: space-around;
-
-    outline: 2px solid red;   //временно
-  }
-
-  .features__photo-item {
-    width: 292px;
-    height: 302px;
-    margin: 0;
-  }
-
   .features__bonus {
     padding: 0;
 
-    background-color: transparent;
+    background-color: @lightgray;
   }
 
   .features__bonus-wrapper {
-    min-height: 204px;   //временно
-    padding-top: 115px;
-    padding-bottom: 110px;
-    padding-left: 380px;
+    padding-top: 105px;
+    padding-bottom: 111px;
+    padding-left: 375px;
     padding-right: 10px;
 
-    outline: 2px solid red;  //временно
     &::before {
       top: 17px;
       left: 10px;
 
       width: 298px;
       height: 345px;
+
+      background-size: 298px auto;
     }
+
+    &::after {
+      bottom: 90px;
+      left: 33px;
+
+      width: 253px;
+      height: 253px;
+
+      font-size: 120px;
+      line-height: 200px;
+
+      border-width: 17px;
+    }
+  }
+
+  .features__title-bonus {
+    margin-bottom: 22px;
+  }
+
+  .features__title-bonus br {
+    display: none;
+  }
+
+  .features__desc-bonus {
+    margin-bottom: 33px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .features__more {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

@@ -8,10 +8,32 @@
 }
 
 .button--download {
-  font-size: 21px;
+  display: block;
+  padding: 15px 0;
+
+  vertical-align: middle;
   color: @white;
 
   background-color: transparent;
+  border: 3px solid @white;
+  border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+
+    background-color: @white;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button--download {
+    font-size: 21px;
+  }
 }
 
 .button--filter-post {
@@ -20,6 +42,19 @@
   background-color: transparent;
   border: 3px solid @pink;
   border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    color: @white;
+
+    background-color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+
+    background-color: @pink;
+  }
 }
 
 .button--filter-cancel {
@@ -28,6 +63,20 @@
   background-color: transparent;
   border: 3px solid fade(@darkblue, 10%);
   border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    color: fade(@darkblue, 30%);
+
+    border-color: fade(@darkblue, 30%);
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+
+    background-color: fade(@darkblue, 30%);
+    border: none;
+  }
 }
 
 .button--form {
@@ -37,4 +86,24 @@
   background-color: @green;
   border: 1px solid @green;
   border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    border-color: #1c9b5e;
+    border-collapse: #1c9b5e;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: @white;
+
+    background-color: #e5e5e5;
+    border: 1px solid #e5e5e5;
+
+    cursor: default;
+  }
 }

@@ -10,7 +10,8 @@
 }
 
 .catalog__header {
-  padding: 50px 20px;
+  padding: 45px 20px;
+  padding-bottom: 50px;
 
   outline: 2px solid aqua;   //временно
 }
@@ -30,14 +31,32 @@
 
   width: 320px;
   height: 137px;
+  margin: 0;
 
   outline: 2px solid green;   //временно
 }
 
 .catalog__rating {
   position: absolute;
+  top: 0;
+  right: 20px;
 
   display: block;
+
+  width: 140px;
+  height: 30px;
+  margin: 0;
+  padding-top: 6px;
+
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  color: @white;
+
+  background-color: @pink;
 }
 
 .catalog__text-wrapper {
@@ -49,6 +68,10 @@
   background-color: @lightgray;
 
   outline: 2px solid green;   //временно
+}
+
+.catalog__top-photo .catalog__text-wrapper {
+  margin: 0 20px;
 }
 
 .catalog__item {
@@ -64,6 +87,7 @@
   display: block;
   width: 280px;
   height: 180px;
+  margin: 0;
 
   outline: 2px solid green;   //временно
 }
@@ -87,6 +111,7 @@
 
 .catalog__comment {
   margin: 0;
+  padding: 0;
 }
 
 .catalog__text {
@@ -94,6 +119,22 @@
   margin-bottom: 3px;
 
   line-height: 24px;
+}
+
+.catalog__like-button {
+  margin: 0;
+  margin-right: 17px;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 13px auto;
+  background-color: @lightgray;
+
+  border: none;
 }
 
 .catalog__like-text {
@@ -119,43 +160,46 @@
 
   .catalog__header {
     padding: 0 80px;
-    padding-top: 100px;
-    padding-bottom: 70px;
+    padding-top: 90px;
+    padding-bottom: 75px;
+  }
+
+  .catalog__intro {
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .catalog__intro br {
     display: none;
   }
 
-  .catalog__top-photo {
-    margin-bottom: 50px;
-  }
-
   .catalog__photo-wrapper {
     width: 660px;
     height: 509px;
-  }
-
-  .catalog__text-wrapper {
     margin: 0;
-    padding: 0 27px;
-    padding-top: 20px;
-    padding-bottom: 30px;
   }
 
-  .catalog__text-wrapper--alteration {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 20px;
-    padding: 25px 27px;
+  .catalog__rating {
+    top: 57px;
   }
 
-  .catalog__autor--alteration {
-    margin-right: auto;
-  }
+  .catalog__top-photo {
+    margin-bottom: 50px;
 
-  .catalog__comment--alteration {
-    order: 1;
+    .catalog__text-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 25px 27px;
+    }
+
+    .catalog__autor {
+      margin-right: auto;
+    }
+
+    .catalog__comment {
+      order: 1;
+    }
   }
 
   .catalog__list {
@@ -166,10 +210,21 @@
   }
 
   .catalog__item {
+    display: flex;
+    flex-direction: column;
     width: 300px;
-    min-height: 455px;   //временно?
+    min-height: 455px;
     margin: 0;
     margin-bottom: 20px;
+
+    .catalog__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 0 27px;
+      padding-top: 23px;
+      padding-bottom: 22px;
+    }
   }
 
   .catalog__picture {
@@ -179,12 +234,18 @@
 
   .catalog__like {
     display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .catalog__like-button {
+    margin-right: 0;
   }
 
   .catalog__like-text {
     order: -1;
     margin-right: auto;
-    padding-right: 17px;
+    padding-right: 22px;
   }
 }
 
@@ -195,12 +256,14 @@
   }
 
   .catalog__wrapper {
-    widows: 960px;
+    width: 960px;
     margin: 0 auto;
   }
 
   .catalog__header {
-    min-height: 70px;  //временно
+    padding: 0 10px;
+    padding-top: 95px;
+    padding-bottom: 87px;
   }
 
   .catalog__intro br {
@@ -212,23 +275,32 @@
     height: 506px;
   }
 
-  .catalog__text-wrapper--alteration {
-    width: 886px;
-    margin: 0 auto;
+  .catalog__rating {
+    top: 54px;
+    right: 10px;
+  }
+
+  .catalog__top-photo .catalog__text-wrapper {
+    padding: 0 20px;
+    padding-top: 25px;
     padding-bottom: 20px;
 
     outline: 2px solid aqua;     //временно
   }
 
   .catalog__list {
-    width: 940px;
-    margin: 0 auto;
+    justify-content: flex-start;
     padding: 0 10px;
   }
 
   .catalog__item {
     min-height: 555px;
+    margin-right: 20px;
     margin-bottom: 54px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 
   .catalog__picture {
