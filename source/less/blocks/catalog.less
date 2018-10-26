@@ -23,15 +23,11 @@
 }
 
 .catalog__photo-wrapper {
+  position: relative;
+
   width: 320px;
   height: 137px;
   margin: 0;
-}
-
-.catalog__photo-wrapper a {
-  position: relative;
-
-  display: block;
 }
 
 .catalog__rating {
@@ -267,6 +263,9 @@
   }
 
   .catalog__photo-wrapper a {
+    position: relative;
+
+    display: block;
     max-width: 1200px;
     min-width: 960px;
     height: 506px;
@@ -276,13 +275,10 @@
   }
 
   .catalog__picture-1 {
-    position: absolute;
-    left: 50%;
-
-    width: 1200px;
+    min-width: 960px;
     height: 506px;
 
-    transform: translate(-50%, 0);
+    object-fit: cover;
   }
 
   .catalog__rating {
