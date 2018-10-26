@@ -27,6 +27,20 @@
 .page-footer__logo-image {
   width: 147px;
   height: 41px;
+
+  fill: @darkblue;
+
+  &:hover {
+    fill: @pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-image--desktop {
+  display: none;
 }
 
 .page-footer__social {
@@ -89,5 +103,13 @@
 
   .page-footer__logo {
     margin-right: 240px;
+  }
+
+  .page-footer__logo-image--mobile {
+    display: none;
+  }
+
+  .page-footer__logo-image--desktop {
+    display: inline-block;
   }
 }
