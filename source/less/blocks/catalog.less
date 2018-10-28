@@ -258,31 +258,32 @@
   }
 
   .catalog__photo-wrapper {
-    width: auto;
-    height: 506px;
-  }
-
-  .catalog__photo-wrapper a {
     position: relative;
 
-    display: block;
+    width: auto;
     max-width: 1200px;
     min-width: 960px;
     height: 506px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 
     overflow: hidden;
   }
 
-  .catalog__picture-1 {
-    min-width: 960px;
+  .catalog__photo-wrapper a {
+    position: absolute;
+    left: 50%;
 
-    object-fit: cover;
+    display: block;
+    width: 1200px;
+    height: 506px;
+
+    transform: translateX(-50%);
   }
 
   .catalog__rating {
     top: 54px;
-    right: 10px;
+    right: 130px;
   }
 
   .catalog__top-photo .catalog__text-wrapper {
