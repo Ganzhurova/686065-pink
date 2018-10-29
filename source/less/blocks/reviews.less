@@ -12,8 +12,6 @@
     content: "";
 
     position: absolute;
-    bottom: 0;
-    left: 0;
 
     width: 100%;
     padding-top: 8%;
@@ -32,7 +30,7 @@
   height: 235px;
   padding: 0 25px;
   padding-top: 42px;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 
 .reviews__item {
@@ -165,7 +163,7 @@
     height: 185px;
     padding: 0 20px;
     padding-top: 45px;
-    padding-bottom: 120px;
+    padding-bottom: 70px;
   }
 
   .reviews__autor-name {
@@ -196,6 +194,13 @@
   .reviews {
     width: auto;
     margin: 0;
+
+    &::after {
+      padding-top: 0;
+      height: 85px;
+
+      background-size: 100% 85px;
+    }
   }
 
   .reviews__wrapper {
@@ -204,7 +209,7 @@
     margin: 0 auto;
     padding: 0 138px;
     padding-top: 185px;
-    padding-bottom: 140px;
+    padding-bottom: 35px;
 
     &::before {
       content: "";
