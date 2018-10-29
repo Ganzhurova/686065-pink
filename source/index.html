@@ -181,41 +181,41 @@
         </section>
 
         <section class="reviews">
-          <div class="reviews__wrapper slider">
+          <div class="reviews__wrapper">
             <h2 class="visually-hidden">
               Отзывы о нас
             </h2>
 
-            <input class="review-1 visually-hidden" type="radio" id="review-1" name="toggle" checked>
-            <input class="review-2 visually-hidden" type="radio" id="review-2" name="toggle">
-            <input class="review-3 visually-hidden" type="radio" id="review-3" name="toggle">
+            <input class="reviews__review-first visually-hidden" type="radio" id="review-1" name="reviews-toggle" checked>
+            <input class="reviews__review-second visually-hidden" type="radio" id="review-2" name="reviews-toggle">
+            <input class="reviews__review-third visually-hidden" type="radio" id="review-3" name="reviews-toggle">
 
-            <div class="slider-controls">
-              <label class="slider-controls__item slider-controls__item--1" for="review-1">
+            <div class="reviews__controls">
+              <label class="reviews__switch reviews__switch--review-first" for="review-1">
                 Первый
               </label>
-              <label class="slider-controls__item slider-controls__item--2" for="review-2">
+              <label class="reviews__switch reviews__switch--review-second" for="review-2">
                 Второй
               </label>
-              <label class="slider-controls__item slider-controls__item--3" for="review-3">
+              <label class="reviews__switch reviews__switch--review-third" for="review-3">
                 Третий
               </label>
             </div>
 
-            <div class="slider-arrow">
-              <label class="slider-arrow__item slider-arrow__item--1" for="review-1">
+            <div class="reviews__controls-arrow">
+              <label class="reviews__arrow reviews__arrow--review-first" for="review-1">
                 Первый
               </label>
-              <label class="slider-arrow__item slider-arrow__item--2" for="review-2">
+              <label class="reviews__arrow reviews__arrow--review-second" for="review-2">
                 Второй
               </label>
-              <label class="slider-arrow__item slider-arrow__item--3" for="review-3">
+              <label class="reviews__arrow reviews__arrow--review-third" for="review-3">
                 Третий
               </label>
             </div>
 
-            <div class="reviews__list slider__list">
-              <blockquote class="reviews__item slider__item">
+            <div class="reviews__list">
+              <blockquote class="reviews__item reviews__item--visibility">
                 <cite class="reviews__autor-name">Николай Петров</cite>
                 <span class="reviews__autor-desc reviews__autor-desc--visibility">
                   25 лет, водитель трамвая
@@ -224,7 +224,7 @@
                   «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
                 </p>
               </blockquote>
-              <blockquote class="reviews__item slider__item">
+              <blockquote class="reviews__item reviews__item--visibility">
                 <cite class="reviews__autor-name">Антон Иванов</cite>
                 <span class="reviews__autor-desc reviews__autor-desc--visibility">
                   27 лет, врач
@@ -233,7 +233,7 @@
                   «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!»
                 </p>
               </blockquote>
-              <blockquote class="reviews__item slider__item">
+              <blockquote class="reviews__item reviews__item--visibility">
                 <cite class="reviews__autor-name">Сергей Степанов</cite>
                 <span class="reviews__autor-desc reviews__autor-desc--visibility">
                   30 лет, строитель
@@ -248,29 +248,29 @@
         </section>
 
         <section class="rates">
-          <div class="rates__wrapper slider__table">
+          <div class="rates__wrapper">
             <h2 class="visually-hidden">
               Наши тарифы
             </h2>
 
-            <input class="rates-1 visually-hidden" type="radio" id="rates-1" name="rates-toggle" checked>
-            <input class="rates-2 visually-hidden" type="radio" id="rates-2" name="rates-toggle">
-            <input class="rates-3 visually-hidden" type="radio" id="rates-3" name="rates-toggle">
+            <input class="rates__rate-base visually-hidden" type="radio" id="rates-1" name="rates-toggle" checked>
+            <input class="rates__rate-standard visually-hidden" type="radio" id="rates-2" name="rates-toggle">
+            <input class="rates__rate-unlim visually-hidden" type="radio" id="rates-3" name="rates-toggle">
 
-            <div class="slider-rates">
-              <label class="slider-rates__item slider-rates__item--1" for="rates-1">
+            <div class="rates__controls">
+              <label class="rates__switch rates__switch--base" for="rates-1">
                 Первый
               </label>
-              <label class="slider-rates__item slider-rates__item--2" for="rates-2">
+              <label class="rates__switch rates__switch--standard" for="rates-2">
                 Второй
               </label>
-              <label class="slider-rates__item slider-rates__item--3" for="rates-3">
+              <label class="rates__switch rates__switch--unlim" for="rates-3">
                 Третий
               </label>
             </div>
 
-            <div class="slider__inner">
-              <table class="rates__table slider__table-list">
+            <div class="rates__inner">
+              <table class="rates__table">
                 <tr>
                   <th class="rates__field visually-hidden">
                     Опции
