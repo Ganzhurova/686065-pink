@@ -11,7 +11,7 @@
   border-bottom: 1px solid @black;
 }
 
-.main-nav__toggle {
+.main-nav__button {
   position: relative;
 
   display: block;
@@ -24,20 +24,17 @@
 
   border: none;
 
-  &:hover .main-nav__toggle--burger,
-  &:focus .main-nav__toggle--burger,
-  &:hover .main-nav__toggle--cross,
-  &:focus .main-nav__toggle--cross {
+  &:hover .main-nav__toggle,
+  &:focus .main-nav__toggle {
     fill: @pink;
   }
 
-  &:active .main-nav__toggle--burger,
-  &:active .main-nav__toggle--cross {
+  &:active .main-nav__toggle {
     opacity: 0.3;
   }
 }
 
-.main-nav__toggle--burger {
+.main-nav__toggle {
   fill: @white;
 }
 
@@ -45,8 +42,6 @@
   position: absolute;
   top: 0;
   right: 0;
-
-  fill: @white;
 }
 
 .main-nav__list {
@@ -116,7 +111,7 @@
 }
 
 .main-nav--nojs {
-  .main-nav__toggle {
+  .main-nav__button {
     display: none;
   }
 
