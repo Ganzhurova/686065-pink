@@ -1,8 +1,6 @@
 .main-nav {
   width: 320px;
   margin: 0 auto;
-
-  background-color: @darkblue;
 }
 
 .main-nav__top {
@@ -11,7 +9,7 @@
   border-bottom: 1px solid @black;
 }
 
-.main-nav__toggle {
+.main-nav__button {
   position: relative;
 
   display: block;
@@ -20,24 +18,21 @@
   margin-left: auto;
   padding: 0;
 
-  background-color: @darkblue;
+  background-color: transparent;
 
   border: none;
 
-  &:hover .main-nav__toggle--burger,
-  &:focus .main-nav__toggle--burger,
-  &:hover .main-nav__toggle--cross,
-  &:focus .main-nav__toggle--cross {
+  &:hover .main-nav__toggle,
+  &:focus .main-nav__toggle {
     fill: @pink;
   }
 
-  &:active .main-nav__toggle--burger,
-  &:active .main-nav__toggle--cross {
+  &:active .main-nav__toggle {
     opacity: 0.3;
   }
 }
 
-.main-nav__toggle--burger {
+.main-nav__toggle {
   fill: @white;
 }
 
@@ -45,12 +40,12 @@
   position: absolute;
   top: 0;
   right: 0;
-
-  fill: @white;
 }
 
 .main-nav__list {
   .reset-list;
+
+  background-color: @darkblue;
 }
 
 .main-nav__list a {
@@ -87,8 +82,6 @@
   .main-nav__top {
     padding-top: 18px;
 
-    background-color: transparent;
-
     border: none;
   }
 
@@ -116,7 +109,7 @@
 }
 
 .main-nav--nojs {
-  .main-nav__toggle {
+  .main-nav__button {
     display: none;
   }
 
@@ -184,6 +177,10 @@
 
   .main-nav__top {
     display: none;
+  }
+
+  .main-nav__list {
+    background-color: transparent;
   }
 
   .main-nav__list a {

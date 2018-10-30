@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <script src="js/picturefill.min.js" async></script>
   </head>
@@ -31,11 +34,11 @@
 
           <nav class="main-nav main-nav--closed main-nav--nojs">
             <div class="main-nav__top">
-              <button class="main-nav__toggle" type="button">
-                <svg class="main-nav__toggle--burger" width="50" height="25">
+              <button class="main-nav__button" type="button">
+                <svg class="main-nav__toggle main-nav__toggle--burger" width="50" height="25">
                   <use xlink:href="#for-sprite-icon-menu-burger"></use>
                 </svg>
-                <svg class="main-nav__toggle--cross" width="24" height="24">
+                <svg class="main-nav__toggle main-nav__toggle--cross" width="24" height="24">
                   <use xlink:href="#for-sprite-icon-menu-cross"></use>
                 </svg>
                 <span class="visually-hidden">
@@ -370,12 +373,12 @@
 
                   <div class="filter__icons">
                     <label class="filter__icon filter__icon--crop" for="filter-crop">
-                      <svg class="filter__toggle filter__toggle--crop" width="44" height="44">
+                      <svg class="filter__toggle filter__toggle--crop" width="48" height="48">
                         <use xlink:href="#for-sprite-icon-editor-crop"></use>
                       </svg>
                     </label>
                     <label class="filter__icon filter__icon--fill" for="filter-fill">
-                      <svg class="filter__toggle filter__toggle--fill" width="48" height="43">
+                      <svg class="filter__toggle filter__toggle--fill" width="48" height="48">
                         <use xlink:href="#for-sprite-icon-editor-fill"></use>
                       </svg>
                     </label>
@@ -388,7 +391,7 @@
 
                   <div class="filter__list">
                     <div class="filter__item filter__item--crop">
-                      <svg class="filter__preview filter__preview--crop" width="44" height="44">
+                      <svg class="filter__preview filter__preview--crop" width="48" height="48">
                         <use xlink:href="#for-sprite-icon-editor-crop"></use>
                       </svg>
                       <div class="filter__range">
@@ -400,7 +403,7 @@
                     </div>
 
                     <div class="filter__item filter__item--fill">
-                      <svg class="filter__preview filter__preview--fill" width="48" height="43">
+                      <svg class="filter__preview filter__preview--fill" width="48" height="48">
                         <use xlink:href="#for-sprite-icon-editor-fill"></use>
                       </svg>
                       <div class="filter__range">

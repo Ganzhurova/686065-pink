@@ -1,4 +1,6 @@
 .form {
+  position: relative;
+
   width: 320px;
   margin: 0 auto;
 
@@ -129,6 +131,8 @@
 
   &::placeholder {
     color: @darkblue;
+
+    opacity: 1;
   }
 
   &:hover {
@@ -244,6 +248,27 @@
   border: none;
 
   box-shadow: 0 0 0 2px #e5e5e5;
+
+  resize: none;
+
+  &::placeholder {
+    color: @darkblue;
+
+    opacity: 1;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 2px @darkblue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 2px @pink;
+  }
 }
 
 .form__group-bottom {
@@ -270,7 +295,7 @@
   color: @pink;
 }
 
-.form__note--visibility {
+.form__note span {
   display: none;
 }
 
@@ -372,7 +397,7 @@
 
     .form__paragraph {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       margin-bottom: 58px;
     }
 
@@ -524,7 +549,6 @@
   .form__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
     justify-content: space-between;
 
     width: 940px;
@@ -541,7 +565,11 @@
     padding-left: 135px;
   }
 
-  .form__group--fullname,
+  .form__group--fullname {
+    width: 433px;
+    padding-top: 15px;
+  }
+
   .form__group--apps {
     width: 433px;
   }
@@ -604,7 +632,7 @@
     margin-bottom: 48px;
   }
 
-  .form__note--visibility {
+  .form__note span {
     display: inline;
   }
 }

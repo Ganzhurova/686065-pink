@@ -8,7 +8,7 @@
 }
 
 .rates__wrapper {
-  padding-top: 66px;
+  padding-top: 91px;
   padding-bottom: 96px;
 }
 
@@ -81,7 +81,7 @@
   border: 2px solid #e5e5e5;
 }
 
-.rates__field--option {
+.rates__option {
   display: block;
   width: 253px;
 }
@@ -107,31 +107,32 @@
 }
 
 @media (max-width: @mobile-width-only) {
+  .rates__wrapper {
+    position: relative;
+  }
+
   .rates__field:first-child {
     display: none;
   }
 
-  .slider__table {
-    position: relative;
-  }
-
-  .slider__inner {
+  .rates__inner {
     overflow: hidden;
   }
 
-  .slider-rates {
+  .rates__controls {
     position: absolute;
     bottom: 40px;
     left: 50%;
 
-    width: 66px;
+    min-width: 66px;
     height: 30px;
-    margin-left: -33px;
 
     font-size: 0;
+
+    transform: translateX(-50%);
   }
 
-  .slider-rates label {
+  .rates__switch {
     position: relative;
 
     display: inline-block;
@@ -168,21 +169,21 @@
     }
   }
 
-  .rates-1:checked ~ .slider__inner .slider__table-list {
-    transform: translate(0);
+  .rates__rate-base:checked ~ .rates__inner .rates__table {
+    transform: translate(20px);
   }
 
-  .rates-2:checked ~ .slider__inner .slider__table-list {
+  .rates__rate-standard:checked ~ .rates__inner .rates__table {
     transform: translate(-257px);
   }
 
-  .rates-3:checked ~ .slider__inner .slider__table-list {
-    transform: translate(-514px);
+  .rates__rate-unlim:checked ~ .rates__inner .rates__table {
+    transform: translate(-534px);
   }
 
-  .rates-1:checked ~ .slider-rates .slider-rates__item--1::before,
-  .rates-2:checked ~ .slider-rates .slider-rates__item--2::before,
-  .rates-3:checked ~ .slider-rates .slider-rates__item--3::before {
+  .rates__rate-base:checked ~ .rates__controls .rates__switch--base::before,
+  .rates__rate-standard:checked ~ .rates__controls .rates__switch--standard::before,
+  .rates__rate-unlim:checked ~ .rates__controls .rates__switch--unlim::before {
     content: "";
 
     position: absolute;
@@ -206,11 +207,11 @@
   }
 
   .rates__wrapper {
-    padding-top: 37px;
+    padding-top: 87px;
     padding-bottom: 67px;
   }
 
-  .slider-rates {
+  .rates__controls {
     display: none;
   }
 
@@ -246,7 +247,7 @@
     text-transform: none;
   }
 
-  .rates__field--option {
+  .rates__option {
     display: none;
   }
 
@@ -270,8 +271,8 @@
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-    padding-top: 50px;
-    padding-bottom: 88px;
+    padding-top: 150px;
+    padding-bottom: 93px;
   }
 
   .rates__caption {
