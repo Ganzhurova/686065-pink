@@ -124,11 +124,12 @@
     bottom: 40px;
     left: 50%;
 
-    width: 66px;
+    min-width: 66px;
     height: 30px;
-    margin-left: -33px;
 
     font-size: 0;
+
+    transform: translateX(-50%);
   }
 
   .rates__switch {
@@ -169,7 +170,7 @@
   }
 
   .rates__rate-base:checked ~ .rates__inner .rates__table {
-    transform: translate(0);
+    transform: translate(20px);
   }
 
   .rates__rate-standard:checked ~ .rates__inner .rates__table {
@@ -177,7 +178,7 @@
   }
 
   .rates__rate-unlim:checked ~ .rates__inner .rates__table {
-    transform: translate(-514px);
+    transform: translate(-534px);
   }
 
   .rates__rate-base:checked ~ .rates__controls .rates__switch--base::before,

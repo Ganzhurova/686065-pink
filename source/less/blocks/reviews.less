@@ -27,7 +27,7 @@
 .reviews__wrapper {
   position: relative;
 
-  height: 235px;
+  min-height: 235px;
   padding: 0 25px;
   padding-top: 42px;
   padding-bottom: 75px;
@@ -77,14 +77,15 @@
 
 .reviews__controls {
   position: absolute;
-  top: 290px;
+  bottom: 38px;
   left: 50%;
 
-  width: 66px;
+  min-width: 66px;
   height: 30px;
-  margin-left: -33px;
 
   font-size: 0;
+
+  transform: translateX(-50%);
 }
 
 .reviews__switch {
@@ -160,7 +161,7 @@
   }
 
   .reviews__wrapper {
-    height: 185px;
+    min-height: 185px;
     padding: 0 20px;
     padding-top: 45px;
     padding-bottom: 70px;
@@ -186,7 +187,7 @@
   }
 
   .reviews__controls {
-    top: 260px;
+    bottom: 15px;
   }
 }
 
@@ -205,7 +206,7 @@
 
   .reviews__wrapper {
     width: 684px;
-    height: 187px;
+    min-height: 187px;
     margin: 0 auto;
     padding: 0 138px;
     padding-top: 185px;
